@@ -1,4 +1,6 @@
 #include<stdio.h>
+#include<stdlib.h>
+#include<string.h>
 FILE * file;
 int occupied[300]={0};
 struct node{
@@ -18,9 +20,9 @@ struct queue{
    void (*addnode)(struct queue*);
    void (*print)(struct queue*);
    void (*insert)(struct queue*);
-   void (*del)(struct queue*,int*);
-   struct node*(*search)(struct queue*,int *);
-   void (*modify)(struct queue*,int*);
+   void (*del)(struct queue*,int);
+   struct node*(*search)(struct queue*,int);
+   void (*modify)(struct queue*,int);
    void (*sort)(struct queue*);
 };
 void constructor(struct queue *q){
