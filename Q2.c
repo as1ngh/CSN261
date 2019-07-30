@@ -1,4 +1,5 @@
 #include<stdio.h>
+#include<stdlib.h>
 struct node{
    int * data;
    int maxsize;
@@ -36,7 +37,7 @@ void deletedata(struct node* p,int BorF){
 void print(struct node*p){
      for(int i=p->front;i!=(p->end+1)%p->maxsize;i=(i+1)%p->maxsize)
        printf("%d ",p->data[i]);
-     printf("\n",p->maxsize);
+     printf("\nCAPACITY %d",p->maxsize);
 }
 void constructor(struct node* p,int size){
      p->data=(int*)malloc(size*sizeof(int));
