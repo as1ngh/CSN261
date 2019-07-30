@@ -1,7 +1,11 @@
 #include<stdio.h>
+//! Contains value of red pixel
 int red[2000][2000];
+//! Contains value of green pixel
 int green[2000][2000];
+//! Contains value of blue pixel
 int blue[2000][2000];
+//! Assign all values to -1
 void assignvalueinit(){
    for(int i=0;i<2000;i++){
      for(int j=0;j<2000;j++){
@@ -11,6 +15,7 @@ void assignvalueinit(){
      }
    }
 }
+//! Retrieve pixel values from DAT file
 void assignvalue(){
     FILE * fBlue;
     FILE * fGreen;
@@ -51,6 +56,7 @@ void assignvalue(){
        fscanf(fRed,"%d",&valueRed);
     }
 }
+//! Removes one colour from the picture
 void removeAllcolour(int choice){
    if(choice==1){//CHOICE 1 FOR RED
       for(int i=0;i<2000;i++){
@@ -83,6 +89,7 @@ void removeAllcolour(int choice){
       }
    }
 }
+//! Preserve one colour and remove all other color
 void preseveOneColour(int choice){
    if(choice==1){//CHOICE 1 FOR RED
       for(int i=0;i<2000;i++){

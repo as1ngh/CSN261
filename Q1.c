@@ -3,6 +3,7 @@
 #include<string.h>
 FILE * file;
 int occupied[300]={0};
+//! Represents node in a doubly linked list
 struct node{
    int roll;
    char name[100];
@@ -12,19 +13,33 @@ struct node{
    struct node*left;
    struct node*right;
 };
+//! Represents doubly linked list
 struct queue{
+   //! Head of linked list
    struct node*head;
+   //! Tail of the linked list
    struct node*tail;
+   //! Size of the linked list
    int size;
+   //! Constructor made in form of fuction pointer to initialize the values
    void (*constructor)(struct queue*);
+   //! Add all data into doubly linked list
    void (*addnode)(struct queue*);
+   //! Prints the list
    void (*print)(struct queue*);
+   //! Inserts an element in an unused roll number place
    void (*insert)(struct queue*);
+   //! Delete an element by taking a roll no.
    void (*del)(struct queue*,int);
+   //! Searches a node and returns address of that node
    struct node*(*search)(struct queue*,int);
+   //! Modify a particular roll number
    void (*modify)(struct queue*,int);
+   //! Sorts the list according to the Names in the list
    void (*sort)(struct queue*);
 };
+
+// ALL FUNCTIONS TO BE DEFINED HERE
 void constructor(struct queue *q){
    q->head=0;
    q->tail=0;
@@ -166,6 +181,7 @@ void sort(struct queue *q){
       }
     }
 }
+//! Opens the CSV formatted file for retrieving data at begining of the program
 void init(){
    file=fopen("StudentData.csv","r");
    fscanf(file,"S.No.;Name;D.O.B.;Address;Phone No\n");
@@ -174,6 +190,7 @@ void init(){
 int main(){
      init();
      struct queue*q=(struct queue*)malloc(sizeof(struct queue));
+     //POINTING ALL THE FUNCTION POINTER TO FUNCTIONS
      q->constructor=q->constructor;
      q->addnode=addnode;
      q->print=print;
@@ -183,6 +200,7 @@ int main(){
      q->modify=modify;
      q->sort=sort;
      q->addnode(q);
+     //MAIN MENU
      int choice;
      printf("1:PRINT\n2:INSERTION:\n3:DELETION:\n4:SEARCH:\n5:MODIFY:\n6:SORT\n-1:EXIT:\n");
      scanf("%d",&choice);

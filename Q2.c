@@ -1,16 +1,27 @@
 #include<stdio.h>
 #include<stdlib.h>
+//! Contains all the functions pointer and variable for deque
 struct node{
+   //! Dynamic array used to store elements
    int * data;
+   //! Max capacity of deque
    int maxsize;
+   //! Current number of elements in deque
    int currsize;
+   //! Denotes front index of deque
    int front;
+   //! Denotes end index of deque
    int end;
+   //! Constructor in form of function pointer
    void (*constructor)(struct node *,int);
+   //! Function pointer to add element either in front or back
    void (*addElement)(struct node*,int ,int);
+   //! funtion pointer to print elements in deque
    void (*print)(struct node*);
+   //! function pointer to delete element in deque either from front or back
    void (*deletedata)(struct node*,int);
 };
+// ALL THE FUNCTIONS
 void deletedata(struct node* p,int BorF){
    if(BorF==0){
       p->currsize--;
@@ -76,6 +87,7 @@ int main(){
    int n;
    printf("SIZE:");
    scanf("%d", &n);
+   //ASSIGNING ALL FUNCTION TO FUNCTION POINTER
    p->constructor=constructor;
    p->addElement=addElement;
    p->print=print;

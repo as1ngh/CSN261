@@ -1,0 +1,73 @@
+\hypertarget{structnode}{}\doxysection{node Struct Reference}
+\label{structnode}\index{node@{node}}
+
+
+Represents node in a doubly linked list.  
+
+
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structnode_a701f7b0bf07919c4b3bf83f4abe34372}\label{structnode_a701f7b0bf07919c4b3bf83f4abe34372}} 
+int {\bfseries roll}
+\item 
+\mbox{\Hypertarget{structnode_a8776f75681b854de61955b58f5905bd9}\label{structnode_a8776f75681b854de61955b58f5905bd9}} 
+char {\bfseries name} \mbox{[}100\mbox{]}
+\item 
+\mbox{\Hypertarget{structnode_a8daf02d45c1959450251eaac73f1f87b}\label{structnode_a8daf02d45c1959450251eaac73f1f87b}} 
+char {\bfseries D\+OB} \mbox{[}20\mbox{]}
+\item 
+\mbox{\Hypertarget{structnode_ae3ed56172c9c3416475dc6f5089e2369}\label{structnode_ae3ed56172c9c3416475dc6f5089e2369}} 
+char {\bfseries address} \mbox{[}200\mbox{]}
+\item 
+\mbox{\Hypertarget{structnode_a62b9e538c4e41dad0d8b8b4fdcf77284}\label{structnode_a62b9e538c4e41dad0d8b8b4fdcf77284}} 
+long long int {\bfseries phone}
+\item 
+\mbox{\Hypertarget{structnode_a3ce38490a651bfda86d88ff955e96abc}\label{structnode_a3ce38490a651bfda86d88ff955e96abc}} 
+struct \mbox{\hyperlink{structnode}{node}} $\ast$ {\bfseries left}
+\item 
+\mbox{\Hypertarget{structnode_a875f75abfe22103500535b179828e4e3}\label{structnode_a875f75abfe22103500535b179828e4e3}} 
+struct \mbox{\hyperlink{structnode}{node}} $\ast$ {\bfseries right}
+\item 
+\mbox{\Hypertarget{structnode_a03735deac41972b8a4fb5164ef597f78}\label{structnode_a03735deac41972b8a4fb5164ef597f78}} 
+int $\ast$ \mbox{\hyperlink{structnode_a03735deac41972b8a4fb5164ef597f78}{data}}
+\begin{DoxyCompactList}\small\item\em Dynamic array used to store elements. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structnode_a53f8a7502599df51b7e865e7b5dcc8f8}\label{structnode_a53f8a7502599df51b7e865e7b5dcc8f8}} 
+int \mbox{\hyperlink{structnode_a53f8a7502599df51b7e865e7b5dcc8f8}{maxsize}}
+\begin{DoxyCompactList}\small\item\em Max capacity of deque. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structnode_a34198a899375af25f028dcaf763483a0}\label{structnode_a34198a899375af25f028dcaf763483a0}} 
+int \mbox{\hyperlink{structnode_a34198a899375af25f028dcaf763483a0}{currsize}}
+\begin{DoxyCompactList}\small\item\em Current number of elements in deque. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structnode_aacca8d118e645c15b806203b99a3cfcb}\label{structnode_aacca8d118e645c15b806203b99a3cfcb}} 
+int \mbox{\hyperlink{structnode_aacca8d118e645c15b806203b99a3cfcb}{front}}
+\begin{DoxyCompactList}\small\item\em Denotes front index of deque. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structnode_a1f8d26d45bf01fe9152688318f1d7479}\label{structnode_a1f8d26d45bf01fe9152688318f1d7479}} 
+int \mbox{\hyperlink{structnode_a1f8d26d45bf01fe9152688318f1d7479}{end}}
+\begin{DoxyCompactList}\small\item\em Denotes end index of deque. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structnode_a77e0f70a621e3358007fdf1fa69231a7}\label{structnode_a77e0f70a621e3358007fdf1fa69231a7}} 
+void($\ast$ \mbox{\hyperlink{structnode_a77e0f70a621e3358007fdf1fa69231a7}{constructor}} )(struct \mbox{\hyperlink{structnode}{node}} $\ast$, int)
+\begin{DoxyCompactList}\small\item\em Constructor in form of function pointer. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structnode_a873575a3a02a298e9d59f80ffae75b22}\label{structnode_a873575a3a02a298e9d59f80ffae75b22}} 
+void($\ast$ \mbox{\hyperlink{structnode_a873575a3a02a298e9d59f80ffae75b22}{add\+Element}} )(struct \mbox{\hyperlink{structnode}{node}} $\ast$, int, int)
+\begin{DoxyCompactList}\small\item\em Function pointer to add element either in front or back. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structnode_affeaf85c45e8eeb875adc6e7eb650f84}\label{structnode_affeaf85c45e8eeb875adc6e7eb650f84}} 
+void($\ast$ \mbox{\hyperlink{structnode_affeaf85c45e8eeb875adc6e7eb650f84}{print}} )(struct \mbox{\hyperlink{structnode}{node}} $\ast$)
+\begin{DoxyCompactList}\small\item\em funtion pointer to print elements in deque \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structnode_a8a5f3f28efec48b947080354e3d7c64c}\label{structnode_a8a5f3f28efec48b947080354e3d7c64c}} 
+void($\ast$ \mbox{\hyperlink{structnode_a8a5f3f28efec48b947080354e3d7c64c}{deletedata}} )(struct \mbox{\hyperlink{structnode}{node}} $\ast$, int)
+\begin{DoxyCompactList}\small\item\em function pointer to delete element in deque either from front or back \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents node in a doubly linked list. 
+
+Contains all the functions pointer and variable for deque. 
+
+Definition at line 7 of file Q1.\+c.
+
+
+
+The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Q1.\+c\item 
+Q2.\+c\end{DoxyCompactItemize}
