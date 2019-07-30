@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['constructor_2',['constructor',['../structqueue.html#a1c35ab8da97fb28defba8b3283f63244',1,'queue::constructor()'],['../structnode.html#a77e0f70a621e3358007fdf1fa69231a7',1,'node::constructor()']]],
-  ['currsize_3',['currsize',['../structnode.html#a34198a899375af25f028dcaf763483a0',1,'node']]]
+  ['blue_5',['blue',['../Q3_8c.html#a4cf5eee56ce2ff039e856febaf0f2693',1,'Q3.c']]]
 ];

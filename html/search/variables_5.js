@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['head_31',['head',['../structqueue.html#ab6b2ff0accd62dbafa77434c6ff572c6',1,'queue']]]
+  ['file_75',['file',['../Q1_8c.html#a702945180aa732857b380a007a7e2a21',1,'Q1.c']]],
+  ['front_76',['front',['../structnode.html#aacca8d118e645c15b806203b99a3cfcb',1,'node']]]
 ];

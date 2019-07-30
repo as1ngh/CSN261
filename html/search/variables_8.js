@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['print_35',['print',['../structqueue.html#a835ab2eab237de44a9d11ef0ef33f2f8',1,'queue::print()'],['../structnode.html#affeaf85c45e8eeb875adc6e7eb650f84',1,'node::print()']]]
+  ['insert_79',['insert',['../structqueue.html#a3dc6fd9cb5325c9d4d4d261b8643fdc8',1,'queue']]]
 ];

@@ -46,7 +46,7 @@ void constructor(struct queue *q){
    q->size=0;
 }
 void addnode(struct queue*q){
-  while(!feof(file)){
+  if(!feof(file)){
      struct node *temp=(struct node*)malloc(sizeof(struct node));
      fscanf(file,"%d;%[^;];%[^;];%[^;];%lld\n",&temp->roll,temp->name,temp->DOB,temp->address,&(temp->phone));
      occupied[temp->roll]=1;
@@ -122,6 +122,7 @@ void del(struct queue*q,int roll){
       }
       temp=temp->right;
    }
+   printf("NO NODE FOUND\n");
 }
 struct node* search(struct queue * q,int roll){
     struct node *temp=q->head;
@@ -199,15 +200,16 @@ int main(){
      q->search=search;
      q->modify=modify;
      q->sort=sort;
-     q->addnode(q);
      //MAIN MENU
      int choice;
-     printf("1:PRINT\n2:INSERTION:\n3:DELETION:\n4:SEARCH:\n5:MODIFY:\n6:SORT\n-1:EXIT:\n");
+     printf("0:ADDNODE:\n1:PRINT\n2:INSERTION:\n3:DELETION:\n4:SEARCH:\n5:MODIFY:\n6:SORT\n-1:EXIT:\n");
      scanf("%d",&choice);
      while(choice!=-1){
-         if(choice==1)
+         if(choice==0)
+           q->addnode(q);
+         else if(choice==1)
            q->print(q);
-         if(choice==2)
+         else if(choice==2)
            q->insert(q);
          else if(choice==3){
            if(q->size==0){
@@ -250,7 +252,7 @@ int main(){
          else if(choice==6){
               q->sort(q);
          }
-         printf("1:PRINT\n2:INSERTION:\n3:DELETION:\n4:SEARCH:\n5:MODIFY:\n6:SORT\n-1:EXIT:\n");
+         printf("0:ADDNODE:\n1:PRINT\n2:INSERTION:\n3:DELETION:\n4:SEARCH:\n5:MODIFY:\n6:SORT\n-1:EXIT:\n");
          scanf("%d",&choice);
      }
 }

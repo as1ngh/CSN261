@@ -8,52 +8,36 @@ Represents node in a doubly linked list.
 \doxysubsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{structnode_a701f7b0bf07919c4b3bf83f4abe34372}\label{structnode_a701f7b0bf07919c4b3bf83f4abe34372}} 
-int {\bfseries roll}
+int \mbox{\hyperlink{structnode_a701f7b0bf07919c4b3bf83f4abe34372}{roll}}
 \item 
-\mbox{\Hypertarget{structnode_a8776f75681b854de61955b58f5905bd9}\label{structnode_a8776f75681b854de61955b58f5905bd9}} 
-char {\bfseries name} \mbox{[}100\mbox{]}
+char \mbox{\hyperlink{structnode_a8776f75681b854de61955b58f5905bd9}{name}} \mbox{[}100\mbox{]}
 \item 
-\mbox{\Hypertarget{structnode_a8daf02d45c1959450251eaac73f1f87b}\label{structnode_a8daf02d45c1959450251eaac73f1f87b}} 
-char {\bfseries D\+OB} \mbox{[}20\mbox{]}
+char \mbox{\hyperlink{structnode_a8daf02d45c1959450251eaac73f1f87b}{D\+OB}} \mbox{[}20\mbox{]}
 \item 
-\mbox{\Hypertarget{structnode_ae3ed56172c9c3416475dc6f5089e2369}\label{structnode_ae3ed56172c9c3416475dc6f5089e2369}} 
-char {\bfseries address} \mbox{[}200\mbox{]}
+char \mbox{\hyperlink{structnode_ae3ed56172c9c3416475dc6f5089e2369}{address}} \mbox{[}200\mbox{]}
 \item 
-\mbox{\Hypertarget{structnode_a62b9e538c4e41dad0d8b8b4fdcf77284}\label{structnode_a62b9e538c4e41dad0d8b8b4fdcf77284}} 
-long long int {\bfseries phone}
+long long int \mbox{\hyperlink{structnode_a62b9e538c4e41dad0d8b8b4fdcf77284}{phone}}
 \item 
-\mbox{\Hypertarget{structnode_a3ce38490a651bfda86d88ff955e96abc}\label{structnode_a3ce38490a651bfda86d88ff955e96abc}} 
-struct \mbox{\hyperlink{structnode}{node}} $\ast$ {\bfseries left}
+struct \mbox{\hyperlink{structnode}{node}} $\ast$ \mbox{\hyperlink{structnode_a3ce38490a651bfda86d88ff955e96abc}{left}}
 \item 
-\mbox{\Hypertarget{structnode_a875f75abfe22103500535b179828e4e3}\label{structnode_a875f75abfe22103500535b179828e4e3}} 
-struct \mbox{\hyperlink{structnode}{node}} $\ast$ {\bfseries right}
+struct \mbox{\hyperlink{structnode}{node}} $\ast$ \mbox{\hyperlink{structnode_a875f75abfe22103500535b179828e4e3}{right}}
 \item 
-\mbox{\Hypertarget{structnode_a03735deac41972b8a4fb5164ef597f78}\label{structnode_a03735deac41972b8a4fb5164ef597f78}} 
 int $\ast$ \mbox{\hyperlink{structnode_a03735deac41972b8a4fb5164ef597f78}{data}}
 \begin{DoxyCompactList}\small\item\em Dynamic array used to store elements. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{structnode_a53f8a7502599df51b7e865e7b5dcc8f8}\label{structnode_a53f8a7502599df51b7e865e7b5dcc8f8}} 
 int \mbox{\hyperlink{structnode_a53f8a7502599df51b7e865e7b5dcc8f8}{maxsize}}
 \begin{DoxyCompactList}\small\item\em Max capacity of deque. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{structnode_a34198a899375af25f028dcaf763483a0}\label{structnode_a34198a899375af25f028dcaf763483a0}} 
 int \mbox{\hyperlink{structnode_a34198a899375af25f028dcaf763483a0}{currsize}}
 \begin{DoxyCompactList}\small\item\em Current number of elements in deque. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{structnode_aacca8d118e645c15b806203b99a3cfcb}\label{structnode_aacca8d118e645c15b806203b99a3cfcb}} 
 int \mbox{\hyperlink{structnode_aacca8d118e645c15b806203b99a3cfcb}{front}}
 \begin{DoxyCompactList}\small\item\em Denotes front index of deque. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{structnode_a1f8d26d45bf01fe9152688318f1d7479}\label{structnode_a1f8d26d45bf01fe9152688318f1d7479}} 
 int \mbox{\hyperlink{structnode_a1f8d26d45bf01fe9152688318f1d7479}{end}}
 \begin{DoxyCompactList}\small\item\em Denotes end index of deque. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{structnode_a77e0f70a621e3358007fdf1fa69231a7}\label{structnode_a77e0f70a621e3358007fdf1fa69231a7}} 
 void($\ast$ \mbox{\hyperlink{structnode_a77e0f70a621e3358007fdf1fa69231a7}{constructor}} )(struct \mbox{\hyperlink{structnode}{node}} $\ast$, int)
 \begin{DoxyCompactList}\small\item\em Constructor in form of function pointer. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{structnode_a873575a3a02a298e9d59f80ffae75b22}\label{structnode_a873575a3a02a298e9d59f80ffae75b22}} 
 void($\ast$ \mbox{\hyperlink{structnode_a873575a3a02a298e9d59f80ffae75b22}{add\+Element}} )(struct \mbox{\hyperlink{structnode}{node}} $\ast$, int, int)
 \begin{DoxyCompactList}\small\item\em Function pointer to add element either in front or back. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{structnode_affeaf85c45e8eeb875adc6e7eb650f84}\label{structnode_affeaf85c45e8eeb875adc6e7eb650f84}} 
 void($\ast$ \mbox{\hyperlink{structnode_affeaf85c45e8eeb875adc6e7eb650f84}{print}} )(struct \mbox{\hyperlink{structnode}{node}} $\ast$)
 \begin{DoxyCompactList}\small\item\em funtion pointer to print elements in deque \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{structnode_a8a5f3f28efec48b947080354e3d7c64c}\label{structnode_a8a5f3f28efec48b947080354e3d7c64c}} 
 void($\ast$ \mbox{\hyperlink{structnode_a8a5f3f28efec48b947080354e3d7c64c}{deletedata}} )(struct \mbox{\hyperlink{structnode}{node}} $\ast$, int)
 \begin{DoxyCompactList}\small\item\em function pointer to delete element in deque either from front or back \end{DoxyCompactList}\end{DoxyCompactItemize}
 
@@ -67,7 +51,206 @@ Definition at line 7 of file Q1.\+c.
 
 
 
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structnode_a873575a3a02a298e9d59f80ffae75b22}\label{structnode_a873575a3a02a298e9d59f80ffae75b22}} 
+\index{node@{node}!addElement@{addElement}}
+\index{addElement@{addElement}!node@{node}}
+\doxysubsubsection{\texorpdfstring{addElement}{addElement}}
+{\footnotesize\ttfamily void($\ast$ node\+::add\+Element) (struct \mbox{\hyperlink{structnode}{node}} $\ast$, int,int)}
+
+
+
+Function pointer to add element either in front or back. 
+
+
+
+Definition at line 18 of file Q2.\+c.
+
+\mbox{\Hypertarget{structnode_ae3ed56172c9c3416475dc6f5089e2369}\label{structnode_ae3ed56172c9c3416475dc6f5089e2369}} 
+\index{node@{node}!address@{address}}
+\index{address@{address}!node@{node}}
+\doxysubsubsection{\texorpdfstring{address}{address}}
+{\footnotesize\ttfamily char node\+::address\mbox{[}200\mbox{]}}
+
+
+
+Definition at line 11 of file Q1.\+c.
+
+\mbox{\Hypertarget{structnode_a77e0f70a621e3358007fdf1fa69231a7}\label{structnode_a77e0f70a621e3358007fdf1fa69231a7}} 
+\index{node@{node}!constructor@{constructor}}
+\index{constructor@{constructor}!node@{node}}
+\doxysubsubsection{\texorpdfstring{constructor}{constructor}}
+{\footnotesize\ttfamily void($\ast$ node\+::constructor) (struct \mbox{\hyperlink{structnode}{node}} $\ast$, int)}
+
+
+
+Constructor in form of function pointer. 
+
+
+
+Definition at line 16 of file Q2.\+c.
+
+\mbox{\Hypertarget{structnode_a34198a899375af25f028dcaf763483a0}\label{structnode_a34198a899375af25f028dcaf763483a0}} 
+\index{node@{node}!currsize@{currsize}}
+\index{currsize@{currsize}!node@{node}}
+\doxysubsubsection{\texorpdfstring{currsize}{currsize}}
+{\footnotesize\ttfamily int node\+::currsize}
+
+
+
+Current number of elements in deque. 
+
+
+
+Definition at line 10 of file Q2.\+c.
+
+\mbox{\Hypertarget{structnode_a03735deac41972b8a4fb5164ef597f78}\label{structnode_a03735deac41972b8a4fb5164ef597f78}} 
+\index{node@{node}!data@{data}}
+\index{data@{data}!node@{node}}
+\doxysubsubsection{\texorpdfstring{data}{data}}
+{\footnotesize\ttfamily int$\ast$ node\+::data}
+
+
+
+Dynamic array used to store elements. 
+
+
+
+Definition at line 6 of file Q2.\+c.
+
+\mbox{\Hypertarget{structnode_a8a5f3f28efec48b947080354e3d7c64c}\label{structnode_a8a5f3f28efec48b947080354e3d7c64c}} 
+\index{node@{node}!deletedata@{deletedata}}
+\index{deletedata@{deletedata}!node@{node}}
+\doxysubsubsection{\texorpdfstring{deletedata}{deletedata}}
+{\footnotesize\ttfamily void($\ast$ node\+::deletedata) (struct \mbox{\hyperlink{structnode}{node}} $\ast$, int)}
+
+
+
+function pointer to delete element in deque either from front or back 
+
+
+
+Definition at line 22 of file Q2.\+c.
+
+\mbox{\Hypertarget{structnode_a8daf02d45c1959450251eaac73f1f87b}\label{structnode_a8daf02d45c1959450251eaac73f1f87b}} 
+\index{node@{node}!DOB@{DOB}}
+\index{DOB@{DOB}!node@{node}}
+\doxysubsubsection{\texorpdfstring{DOB}{DOB}}
+{\footnotesize\ttfamily char node\+::\+D\+OB\mbox{[}20\mbox{]}}
+
+
+
+Definition at line 10 of file Q1.\+c.
+
+\mbox{\Hypertarget{structnode_a1f8d26d45bf01fe9152688318f1d7479}\label{structnode_a1f8d26d45bf01fe9152688318f1d7479}} 
+\index{node@{node}!end@{end}}
+\index{end@{end}!node@{node}}
+\doxysubsubsection{\texorpdfstring{end}{end}}
+{\footnotesize\ttfamily int node\+::end}
+
+
+
+Denotes end index of deque. 
+
+
+
+Definition at line 14 of file Q2.\+c.
+
+\mbox{\Hypertarget{structnode_aacca8d118e645c15b806203b99a3cfcb}\label{structnode_aacca8d118e645c15b806203b99a3cfcb}} 
+\index{node@{node}!front@{front}}
+\index{front@{front}!node@{node}}
+\doxysubsubsection{\texorpdfstring{front}{front}}
+{\footnotesize\ttfamily int node\+::front}
+
+
+
+Denotes front index of deque. 
+
+
+
+Definition at line 12 of file Q2.\+c.
+
+\mbox{\Hypertarget{structnode_a3ce38490a651bfda86d88ff955e96abc}\label{structnode_a3ce38490a651bfda86d88ff955e96abc}} 
+\index{node@{node}!left@{left}}
+\index{left@{left}!node@{node}}
+\doxysubsubsection{\texorpdfstring{left}{left}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{structnode}{node}}$\ast$ node\+::left}
+
+
+
+Definition at line 13 of file Q1.\+c.
+
+\mbox{\Hypertarget{structnode_a53f8a7502599df51b7e865e7b5dcc8f8}\label{structnode_a53f8a7502599df51b7e865e7b5dcc8f8}} 
+\index{node@{node}!maxsize@{maxsize}}
+\index{maxsize@{maxsize}!node@{node}}
+\doxysubsubsection{\texorpdfstring{maxsize}{maxsize}}
+{\footnotesize\ttfamily int node\+::maxsize}
+
+
+
+Max capacity of deque. 
+
+
+
+Definition at line 8 of file Q2.\+c.
+
+\mbox{\Hypertarget{structnode_a8776f75681b854de61955b58f5905bd9}\label{structnode_a8776f75681b854de61955b58f5905bd9}} 
+\index{node@{node}!name@{name}}
+\index{name@{name}!node@{node}}
+\doxysubsubsection{\texorpdfstring{name}{name}}
+{\footnotesize\ttfamily char node\+::name\mbox{[}100\mbox{]}}
+
+
+
+Definition at line 9 of file Q1.\+c.
+
+\mbox{\Hypertarget{structnode_a62b9e538c4e41dad0d8b8b4fdcf77284}\label{structnode_a62b9e538c4e41dad0d8b8b4fdcf77284}} 
+\index{node@{node}!phone@{phone}}
+\index{phone@{phone}!node@{node}}
+\doxysubsubsection{\texorpdfstring{phone}{phone}}
+{\footnotesize\ttfamily long long int node\+::phone}
+
+
+
+Definition at line 12 of file Q1.\+c.
+
+\mbox{\Hypertarget{structnode_affeaf85c45e8eeb875adc6e7eb650f84}\label{structnode_affeaf85c45e8eeb875adc6e7eb650f84}} 
+\index{node@{node}!print@{print}}
+\index{print@{print}!node@{node}}
+\doxysubsubsection{\texorpdfstring{print}{print}}
+{\footnotesize\ttfamily void($\ast$ node\+::print) (struct \mbox{\hyperlink{structnode}{node}} $\ast$)}
+
+
+
+funtion pointer to print elements in deque 
+
+
+
+Definition at line 20 of file Q2.\+c.
+
+\mbox{\Hypertarget{structnode_a875f75abfe22103500535b179828e4e3}\label{structnode_a875f75abfe22103500535b179828e4e3}} 
+\index{node@{node}!right@{right}}
+\index{right@{right}!node@{node}}
+\doxysubsubsection{\texorpdfstring{right}{right}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{structnode}{node}}$\ast$ node\+::right}
+
+
+
+Definition at line 14 of file Q1.\+c.
+
+\mbox{\Hypertarget{structnode_a701f7b0bf07919c4b3bf83f4abe34372}\label{structnode_a701f7b0bf07919c4b3bf83f4abe34372}} 
+\index{node@{node}!roll@{roll}}
+\index{roll@{roll}!node@{node}}
+\doxysubsubsection{\texorpdfstring{roll}{roll}}
+{\footnotesize\ttfamily int node\+::roll}
+
+
+
+Definition at line 8 of file Q1.\+c.
+
+
+
 The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-Q1.\+c\item 
-Q2.\+c\end{DoxyCompactItemize}
+\mbox{\hyperlink{Q1_8c}{Q1.\+c}}\item 
+\mbox{\hyperlink{Q2_8c}{Q2.\+c}}\end{DoxyCompactItemize}

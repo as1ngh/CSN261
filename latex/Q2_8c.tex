@@ -1,0 +1,223 @@
+\hypertarget{Q2_8c}{}\doxysection{Q2.\+c File Reference}
+\label{Q2_8c}\index{Q2.c@{Q2.c}}
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structnode}{node}}
+\begin{DoxyCompactList}\small\item\em Represents node in a doubly linked list. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{Q2_8c_a7a8afef703754daa03cc0ea787e2ae32}{deletedata}} (struct \mbox{\hyperlink{structnode}{node}} $\ast$p, int BorF)
+\item 
+void \mbox{\hyperlink{Q2_8c_a2011e81bd21c0a2777637637c264661c}{print}} (struct \mbox{\hyperlink{structnode}{node}} $\ast$p)
+\item 
+void \mbox{\hyperlink{Q2_8c_ad5857cd15d0e45abc5b3abf651c49472}{constructor}} (struct \mbox{\hyperlink{structnode}{node}} $\ast$p, int size)
+\item 
+void \mbox{\hyperlink{Q2_8c_ae1b5dba9e98ed9fb27063a5f186adba1}{add\+Element}} (struct \mbox{\hyperlink{structnode}{node}} $\ast$p, int value, int BorF)
+\item 
+int \mbox{\hyperlink{Q2_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{Q2_8c_ae1b5dba9e98ed9fb27063a5f186adba1}\label{Q2_8c_ae1b5dba9e98ed9fb27063a5f186adba1}} 
+\index{Q2.c@{Q2.c}!addElement@{addElement}}
+\index{addElement@{addElement}!Q2.c@{Q2.c}}
+\doxysubsubsection{\texorpdfstring{addElement()}{addElement()}}
+{\footnotesize\ttfamily void add\+Element (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structnode}{node}} $\ast$}]{p,  }\item[{int}]{value,  }\item[{int}]{BorF }\end{DoxyParamCaption})}
+
+
+
+Definition at line 60 of file Q2.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{60                                                   \{}
+\DoxyCodeLine{61      \textcolor{keywordflow}{if}(BorF==0)\{}
+\DoxyCodeLine{62         p-\/>\mbox{\hyperlink{structnode_a34198a899375af25f028dcaf763483a0}{currsize}}++;}
+\DoxyCodeLine{63         p-\/>\mbox{\hyperlink{structnode_aacca8d118e645c15b806203b99a3cfcb}{front}}=(p-\/>\mbox{\hyperlink{structnode_aacca8d118e645c15b806203b99a3cfcb}{front}}-\/1+p-\/>\mbox{\hyperlink{structnode_a53f8a7502599df51b7e865e7b5dcc8f8}{maxsize}})\%p-\/>\mbox{\hyperlink{structnode_a53f8a7502599df51b7e865e7b5dcc8f8}{maxsize}};}
+\DoxyCodeLine{64         p-\/>\mbox{\hyperlink{structnode_a03735deac41972b8a4fb5164ef597f78}{data}}[p-\/>\mbox{\hyperlink{structnode_aacca8d118e645c15b806203b99a3cfcb}{front}}]=value;}
+\DoxyCodeLine{65     \}}
+\DoxyCodeLine{66     \textcolor{keywordflow}{if}(BorF==1)\{}
+\DoxyCodeLine{67        p-\/>\mbox{\hyperlink{structnode_a34198a899375af25f028dcaf763483a0}{currsize}}++;}
+\DoxyCodeLine{68        p-\/>\mbox{\hyperlink{structnode_a1f8d26d45bf01fe9152688318f1d7479}{end}}=(p-\/>\mbox{\hyperlink{structnode_a1f8d26d45bf01fe9152688318f1d7479}{end}}+1)\%p-\/>\mbox{\hyperlink{structnode_a53f8a7502599df51b7e865e7b5dcc8f8}{maxsize}};}
+\DoxyCodeLine{69        p-\/>\mbox{\hyperlink{structnode_a03735deac41972b8a4fb5164ef597f78}{data}}[p-\/>\mbox{\hyperlink{structnode_a1f8d26d45bf01fe9152688318f1d7479}{end}}]=value;}
+\DoxyCodeLine{70     \}}
+\DoxyCodeLine{71     \textcolor{keywordflow}{if}(p-\/>\mbox{\hyperlink{structnode_a53f8a7502599df51b7e865e7b5dcc8f8}{maxsize}}==p-\/>\mbox{\hyperlink{structnode_a34198a899375af25f028dcaf763483a0}{currsize}})\{}
+\DoxyCodeLine{72          \textcolor{keywordtype}{int} *arr=(\textcolor{keywordtype}{int}*)malloc(2*p-\/>\mbox{\hyperlink{structnode_a53f8a7502599df51b7e865e7b5dcc8f8}{maxsize}}*\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{int}));}
+\DoxyCodeLine{73          \textcolor{keywordtype}{int} k=0;}
+\DoxyCodeLine{74          \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i=p-\/>\mbox{\hyperlink{structnode_aacca8d118e645c15b806203b99a3cfcb}{front}};i!=p-\/>\mbox{\hyperlink{structnode_a1f8d26d45bf01fe9152688318f1d7479}{end}}\%p-\/>\mbox{\hyperlink{structnode_a53f8a7502599df51b7e865e7b5dcc8f8}{maxsize}};i=(i+1)\%p-\/>\mbox{\hyperlink{structnode_a53f8a7502599df51b7e865e7b5dcc8f8}{maxsize}})\{}
+\DoxyCodeLine{75             arr[k++]=p-\/>\mbox{\hyperlink{structnode_a03735deac41972b8a4fb5164ef597f78}{data}}[i];}
+\DoxyCodeLine{76          \}}
+\DoxyCodeLine{77          arr[k]=p-\/>\mbox{\hyperlink{structnode_a03735deac41972b8a4fb5164ef597f78}{data}}[p-\/>\mbox{\hyperlink{structnode_a1f8d26d45bf01fe9152688318f1d7479}{end}}];}
+\DoxyCodeLine{78          p-\/>\mbox{\hyperlink{structnode_aacca8d118e645c15b806203b99a3cfcb}{front}}=0;}
+\DoxyCodeLine{79          p-\/>\mbox{\hyperlink{structnode_a1f8d26d45bf01fe9152688318f1d7479}{end}}=k;}
+\DoxyCodeLine{80          free(p-\/>\mbox{\hyperlink{structnode_a03735deac41972b8a4fb5164ef597f78}{data}});}
+\DoxyCodeLine{81          p-\/>\mbox{\hyperlink{structnode_a03735deac41972b8a4fb5164ef597f78}{data}}=arr;}
+\DoxyCodeLine{82          p-\/>\mbox{\hyperlink{structnode_a53f8a7502599df51b7e865e7b5dcc8f8}{maxsize}}=2*p-\/>\mbox{\hyperlink{structnode_a53f8a7502599df51b7e865e7b5dcc8f8}{maxsize}};}
+\DoxyCodeLine{83      \}}
+\DoxyCodeLine{84 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{Q2_8c_ad5857cd15d0e45abc5b3abf651c49472}\label{Q2_8c_ad5857cd15d0e45abc5b3abf651c49472}} 
+\index{Q2.c@{Q2.c}!constructor@{constructor}}
+\index{constructor@{constructor}!Q2.c@{Q2.c}}
+\doxysubsubsection{\texorpdfstring{constructor()}{constructor()}}
+{\footnotesize\ttfamily void constructor (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structnode}{node}} $\ast$}]{p,  }\item[{int}]{size }\end{DoxyParamCaption})}
+
+
+
+Definition at line 53 of file Q2.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{53                                          \{}
+\DoxyCodeLine{54      p-\/>\mbox{\hyperlink{structnode_a03735deac41972b8a4fb5164ef597f78}{data}}=(\textcolor{keywordtype}{int}*)malloc(size*\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{int}));}
+\DoxyCodeLine{55      p-\/>\mbox{\hyperlink{structnode_a53f8a7502599df51b7e865e7b5dcc8f8}{maxsize}}=size;}
+\DoxyCodeLine{56      p-\/>\mbox{\hyperlink{structnode_a34198a899375af25f028dcaf763483a0}{currsize}}=0;}
+\DoxyCodeLine{57      p-\/>\mbox{\hyperlink{structnode_aacca8d118e645c15b806203b99a3cfcb}{front}}=0;}
+\DoxyCodeLine{58      p-\/>\mbox{\hyperlink{structnode_a1f8d26d45bf01fe9152688318f1d7479}{end}}=-\/1+p-\/>\mbox{\hyperlink{structnode_a53f8a7502599df51b7e865e7b5dcc8f8}{maxsize}};}
+\DoxyCodeLine{59 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{Q2_8c_a7a8afef703754daa03cc0ea787e2ae32}\label{Q2_8c_a7a8afef703754daa03cc0ea787e2ae32}} 
+\index{Q2.c@{Q2.c}!deletedata@{deletedata}}
+\index{deletedata@{deletedata}!Q2.c@{Q2.c}}
+\doxysubsubsection{\texorpdfstring{deletedata()}{deletedata()}}
+{\footnotesize\ttfamily void deletedata (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structnode}{node}} $\ast$}]{p,  }\item[{int}]{BorF }\end{DoxyParamCaption})}
+
+
+
+Definition at line 25 of file Q2.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{25                                         \{}
+\DoxyCodeLine{26    \textcolor{keywordflow}{if}(BorF==0)\{}
+\DoxyCodeLine{27       p-\/>\mbox{\hyperlink{structnode_a34198a899375af25f028dcaf763483a0}{currsize}}-\/-\/;}
+\DoxyCodeLine{28       p-\/>\mbox{\hyperlink{structnode_aacca8d118e645c15b806203b99a3cfcb}{front}}=(p-\/>\mbox{\hyperlink{structnode_aacca8d118e645c15b806203b99a3cfcb}{front}}+1)\%p-\/>\mbox{\hyperlink{structnode_a53f8a7502599df51b7e865e7b5dcc8f8}{maxsize}};}
+\DoxyCodeLine{29    \}}
+\DoxyCodeLine{30    \textcolor{keywordflow}{if}(BorF==1)\{}
+\DoxyCodeLine{31       p-\/>\mbox{\hyperlink{structnode_a34198a899375af25f028dcaf763483a0}{currsize}}-\/-\/;}
+\DoxyCodeLine{32       p-\/>\mbox{\hyperlink{structnode_a1f8d26d45bf01fe9152688318f1d7479}{end}}=(p-\/>\mbox{\hyperlink{structnode_a1f8d26d45bf01fe9152688318f1d7479}{end}}-\/1+p-\/>\mbox{\hyperlink{structnode_a53f8a7502599df51b7e865e7b5dcc8f8}{maxsize}})\%p-\/>\mbox{\hyperlink{structnode_a53f8a7502599df51b7e865e7b5dcc8f8}{maxsize}};}
+\DoxyCodeLine{33    \}}
+\DoxyCodeLine{34    \textcolor{keywordflow}{if}(p-\/>\mbox{\hyperlink{structnode_a34198a899375af25f028dcaf763483a0}{currsize}}<p-\/>\mbox{\hyperlink{structnode_a53f8a7502599df51b7e865e7b5dcc8f8}{maxsize}}/2)\{}
+\DoxyCodeLine{35          \textcolor{keywordtype}{int} *arr=(\textcolor{keywordtype}{int}*)malloc((p-\/>\mbox{\hyperlink{structnode_a53f8a7502599df51b7e865e7b5dcc8f8}{maxsize}}/2)*\textcolor{keyword}{sizeof}(int));}
+\DoxyCodeLine{36          \textcolor{keywordtype}{int} k=0;}
+\DoxyCodeLine{37          \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i=p-\/>\mbox{\hyperlink{structnode_aacca8d118e645c15b806203b99a3cfcb}{front}};i!=p-\/>\mbox{\hyperlink{structnode_a1f8d26d45bf01fe9152688318f1d7479}{end}}\%p-\/>\mbox{\hyperlink{structnode_a53f8a7502599df51b7e865e7b5dcc8f8}{maxsize}};i=(i+1)\%p-\/>\mbox{\hyperlink{structnode_a53f8a7502599df51b7e865e7b5dcc8f8}{maxsize}})\{}
+\DoxyCodeLine{38             arr[k++]=p-\/>\mbox{\hyperlink{structnode_a03735deac41972b8a4fb5164ef597f78}{data}}[i];}
+\DoxyCodeLine{39          \}}
+\DoxyCodeLine{40          arr[k]=p-\/>\mbox{\hyperlink{structnode_a03735deac41972b8a4fb5164ef597f78}{data}}[p-\/>\mbox{\hyperlink{structnode_a1f8d26d45bf01fe9152688318f1d7479}{end}}];}
+\DoxyCodeLine{41          p-\/>\mbox{\hyperlink{structnode_aacca8d118e645c15b806203b99a3cfcb}{front}}=0;}
+\DoxyCodeLine{42          p-\/>\mbox{\hyperlink{structnode_a1f8d26d45bf01fe9152688318f1d7479}{end}}=k;}
+\DoxyCodeLine{43          free(p-\/>\mbox{\hyperlink{structnode_a03735deac41972b8a4fb5164ef597f78}{data}});}
+\DoxyCodeLine{44          p-\/>\mbox{\hyperlink{structnode_a03735deac41972b8a4fb5164ef597f78}{data}}=arr;}
+\DoxyCodeLine{45          p-\/>\mbox{\hyperlink{structnode_a53f8a7502599df51b7e865e7b5dcc8f8}{maxsize}}=p-\/>\mbox{\hyperlink{structnode_a53f8a7502599df51b7e865e7b5dcc8f8}{maxsize}}/2;}
+\DoxyCodeLine{46    \}}
+\DoxyCodeLine{47 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{Q2_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}\label{Q2_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}} 
+\index{Q2.c@{Q2.c}!main@{main}}
+\index{main@{main}!Q2.c@{Q2.c}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 85 of file Q2.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{85           \{}
+\DoxyCodeLine{86    \textcolor{keyword}{struct }\mbox{\hyperlink{structnode}{node}} * p=(\textcolor{keyword}{struct }\mbox{\hyperlink{structnode}{node}} *)malloc(\textcolor{keyword}{sizeof}(\textcolor{keyword}{struct} \mbox{\hyperlink{structnode}{node}}));}
+\DoxyCodeLine{87    \textcolor{keywordtype}{int} n;}
+\DoxyCodeLine{88    printf(\textcolor{stringliteral}{"SIZE:"});}
+\DoxyCodeLine{89    scanf(\textcolor{stringliteral}{"\%d"}, \&n);}
+\DoxyCodeLine{90    \textcolor{comment}{//ASSIGNING ALL FUNCTION TO FUNCTION POINTER}}
+\DoxyCodeLine{91    p-\/>\mbox{\hyperlink{structnode_a77e0f70a621e3358007fdf1fa69231a7}{constructor}}=\mbox{\hyperlink{Q2_8c_ad5857cd15d0e45abc5b3abf651c49472}{constructor}};}
+\DoxyCodeLine{92    p-\/>\mbox{\hyperlink{structnode_a873575a3a02a298e9d59f80ffae75b22}{addElement}}=\mbox{\hyperlink{Q2_8c_ae1b5dba9e98ed9fb27063a5f186adba1}{addElement}};}
+\DoxyCodeLine{93    p-\/>\mbox{\hyperlink{structnode_affeaf85c45e8eeb875adc6e7eb650f84}{print}}=\mbox{\hyperlink{Q2_8c_a2011e81bd21c0a2777637637c264661c}{print}};}
+\DoxyCodeLine{94    p-\/>\mbox{\hyperlink{structnode_a8a5f3f28efec48b947080354e3d7c64c}{deletedata}}=\mbox{\hyperlink{Q2_8c_a7a8afef703754daa03cc0ea787e2ae32}{deletedata}};}
+\DoxyCodeLine{95    p-\/>\mbox{\hyperlink{structnode_a77e0f70a621e3358007fdf1fa69231a7}{constructor}}(p,n);}
+\DoxyCodeLine{96    \textcolor{keywordtype}{int} choice;}
+\DoxyCodeLine{97    printf(\textcolor{stringliteral}{"Enter Choice :\(\backslash\)n"});}
+\DoxyCodeLine{98    printf(\textcolor{stringliteral}{"1. ADD ELEMENT :\(\backslash\)n"});}
+\DoxyCodeLine{99    printf(\textcolor{stringliteral}{"2. DELETE ELEMENT :\(\backslash\)n"});}
+\DoxyCodeLine{100    printf(\textcolor{stringliteral}{"3. PRINT :\(\backslash\)n"});}
+\DoxyCodeLine{101    printf(\textcolor{stringliteral}{"-\/1.EXIT :\(\backslash\)n"});}
+\DoxyCodeLine{102    scanf(\textcolor{stringliteral}{"\%d"},\&choice);}
+\DoxyCodeLine{103    \textcolor{keywordflow}{while}(choice!=-\/1)\{}
+\DoxyCodeLine{104       \textcolor{keywordflow}{if}(choice==1)\{}
+\DoxyCodeLine{105           printf(\textcolor{stringliteral}{"   1.ADD AT LAST :\(\backslash\)n"});}
+\DoxyCodeLine{106           printf(\textcolor{stringliteral}{"   2.ADD AT FRONT :\(\backslash\)n"});}
+\DoxyCodeLine{107           printf(\textcolor{stringliteral}{"   "});}
+\DoxyCodeLine{108           \textcolor{keywordtype}{int} choice2;}
+\DoxyCodeLine{109           scanf(\textcolor{stringliteral}{"\%d"},\&choice2);}
+\DoxyCodeLine{110           \textcolor{keywordtype}{int} value;}
+\DoxyCodeLine{111           printf(\textcolor{stringliteral}{"       VALUE :\(\backslash\)n"});}
+\DoxyCodeLine{112           printf(\textcolor{stringliteral}{"       "});}
+\DoxyCodeLine{113           scanf(\textcolor{stringliteral}{"\%d"},\&value);}
+\DoxyCodeLine{114           \textcolor{keywordflow}{if}(choice2==1)\{}
+\DoxyCodeLine{115               p-\/>\mbox{\hyperlink{structnode_a873575a3a02a298e9d59f80ffae75b22}{addElement}}(p,value,0);}
+\DoxyCodeLine{116           \}}
+\DoxyCodeLine{117           \textcolor{keywordflow}{if}(choice2==2)\{}
+\DoxyCodeLine{118               p-\/>\mbox{\hyperlink{structnode_a873575a3a02a298e9d59f80ffae75b22}{addElement}}(p,value,1);}
+\DoxyCodeLine{119           \}}
+\DoxyCodeLine{120       \}}
+\DoxyCodeLine{121       \textcolor{keywordflow}{if}(choice==2)\{}
+\DoxyCodeLine{122          \textcolor{keywordflow}{if}(p-\/>\mbox{\hyperlink{structnode_a34198a899375af25f028dcaf763483a0}{currsize}}==0)\{}
+\DoxyCodeLine{123            printf(\textcolor{stringliteral}{"NO NODE TO DELETE\(\backslash\)n"});}
+\DoxyCodeLine{124          \}}
+\DoxyCodeLine{125           \textcolor{keywordflow}{if}(p-\/>\mbox{\hyperlink{structnode_a34198a899375af25f028dcaf763483a0}{currsize}}!=0)\{}
+\DoxyCodeLine{126           printf(\textcolor{stringliteral}{"   1.DELETE AT LAST :\(\backslash\)n"});}
+\DoxyCodeLine{127           printf(\textcolor{stringliteral}{"   2.DELETE AT FRONT :\(\backslash\)n"});}
+\DoxyCodeLine{128           printf(\textcolor{stringliteral}{"   "});}
+\DoxyCodeLine{129           \textcolor{keywordtype}{int} choice2;}
+\DoxyCodeLine{130           scanf(\textcolor{stringliteral}{"\%d"},\&choice2);}
+\DoxyCodeLine{131           \textcolor{keywordflow}{if}(choice2==1)\{}
+\DoxyCodeLine{132               \textcolor{keywordflow}{if}(p-\/>\mbox{\hyperlink{structnode_a34198a899375af25f028dcaf763483a0}{currsize}}!=0)}
+\DoxyCodeLine{133               p-\/>\mbox{\hyperlink{structnode_a8a5f3f28efec48b947080354e3d7c64c}{deletedata}}(p,0);}
+\DoxyCodeLine{134           \}}
+\DoxyCodeLine{135           \textcolor{keywordflow}{if}(choice2==2)\{}
+\DoxyCodeLine{136              \textcolor{keywordflow}{if}(p-\/>\mbox{\hyperlink{structnode_a34198a899375af25f028dcaf763483a0}{currsize}}!=0)}
+\DoxyCodeLine{137               p-\/>\mbox{\hyperlink{structnode_a8a5f3f28efec48b947080354e3d7c64c}{deletedata}}(p,1);}
+\DoxyCodeLine{138           \}}
+\DoxyCodeLine{139           \}}
+\DoxyCodeLine{140       \}}
+\DoxyCodeLine{141       \textcolor{keywordflow}{if}(choice==3)\{}
+\DoxyCodeLine{142          p-\/>\mbox{\hyperlink{structnode_affeaf85c45e8eeb875adc6e7eb650f84}{print}}(p);}
+\DoxyCodeLine{143       \}}
+\DoxyCodeLine{144       printf(\textcolor{stringliteral}{"Enter Choice :\(\backslash\)n"});}
+\DoxyCodeLine{145       printf(\textcolor{stringliteral}{"1. ADD ELEMENT :\(\backslash\)n"});}
+\DoxyCodeLine{146       printf(\textcolor{stringliteral}{"2. DELETE ELEMENT :\(\backslash\)n"});}
+\DoxyCodeLine{147       printf(\textcolor{stringliteral}{"3. PRINT :\(\backslash\)n"});}
+\DoxyCodeLine{148       printf(\textcolor{stringliteral}{"-\/1.EXIT :\(\backslash\)n"});}
+\DoxyCodeLine{149       scanf(\textcolor{stringliteral}{"\%u"},\&choice);}
+\DoxyCodeLine{150    \}}
+\DoxyCodeLine{151    \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{152 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{Q2_8c_a2011e81bd21c0a2777637637c264661c}\label{Q2_8c_a2011e81bd21c0a2777637637c264661c}} 
+\index{Q2.c@{Q2.c}!print@{print}}
+\index{print@{print}!Q2.c@{Q2.c}}
+\doxysubsubsection{\texorpdfstring{print()}{print()}}
+{\footnotesize\ttfamily void print (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structnode}{node}} $\ast$}]{p }\end{DoxyParamCaption})}
+
+
+
+Definition at line 48 of file Q2.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{48                          \{}
+\DoxyCodeLine{49      \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i=p-\/>\mbox{\hyperlink{structnode_aacca8d118e645c15b806203b99a3cfcb}{front}};i!=(p-\/>\mbox{\hyperlink{structnode_a1f8d26d45bf01fe9152688318f1d7479}{end}}+1)\%p-\/>\mbox{\hyperlink{structnode_a53f8a7502599df51b7e865e7b5dcc8f8}{maxsize}};i=(i+1)\%p-\/>\mbox{\hyperlink{structnode_a53f8a7502599df51b7e865e7b5dcc8f8}{maxsize}})}
+\DoxyCodeLine{50        printf(\textcolor{stringliteral}{"\%d "},p-\/>\mbox{\hyperlink{structnode_a03735deac41972b8a4fb5164ef597f78}{data}}[i]);}
+\DoxyCodeLine{51      printf(\textcolor{stringliteral}{"\(\backslash\)nCAPACITY \%d"},p-\/>\mbox{\hyperlink{structnode_a53f8a7502599df51b7e865e7b5dcc8f8}{maxsize}});}
+\DoxyCodeLine{52 \}}
+
+\end{DoxyCode}

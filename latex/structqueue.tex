@@ -8,37 +8,26 @@ Represents doubly linked list.
 \doxysubsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{structqueue_ab6b2ff0accd62dbafa77434c6ff572c6}\label{structqueue_ab6b2ff0accd62dbafa77434c6ff572c6}} 
 struct \mbox{\hyperlink{structnode}{node}} $\ast$ \mbox{\hyperlink{structqueue_ab6b2ff0accd62dbafa77434c6ff572c6}{head}}
 \begin{DoxyCompactList}\small\item\em Head of linked list. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{structqueue_ac2b88203ae2da21287502fec0392d1ab}\label{structqueue_ac2b88203ae2da21287502fec0392d1ab}} 
 struct \mbox{\hyperlink{structnode}{node}} $\ast$ \mbox{\hyperlink{structqueue_ac2b88203ae2da21287502fec0392d1ab}{tail}}
 \begin{DoxyCompactList}\small\item\em Tail of the linked list. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{structqueue_afb9096840ba43e124b3a58648db557cc}\label{structqueue_afb9096840ba43e124b3a58648db557cc}} 
 int \mbox{\hyperlink{structqueue_afb9096840ba43e124b3a58648db557cc}{size}}
 \begin{DoxyCompactList}\small\item\em Size of the linked list. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{structqueue_a1c35ab8da97fb28defba8b3283f63244}\label{structqueue_a1c35ab8da97fb28defba8b3283f63244}} 
 void($\ast$ \mbox{\hyperlink{structqueue_a1c35ab8da97fb28defba8b3283f63244}{constructor}} )(struct \mbox{\hyperlink{structqueue}{queue}} $\ast$)
 \begin{DoxyCompactList}\small\item\em Constructor made in form of fuction pointer to initialize the values. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{structqueue_aacf31622d8c0b68268e71937299d2828}\label{structqueue_aacf31622d8c0b68268e71937299d2828}} 
 void($\ast$ \mbox{\hyperlink{structqueue_aacf31622d8c0b68268e71937299d2828}{addnode}} )(struct \mbox{\hyperlink{structqueue}{queue}} $\ast$)
 \begin{DoxyCompactList}\small\item\em Add all data into doubly linked list. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{structqueue_a835ab2eab237de44a9d11ef0ef33f2f8}\label{structqueue_a835ab2eab237de44a9d11ef0ef33f2f8}} 
 void($\ast$ \mbox{\hyperlink{structqueue_a835ab2eab237de44a9d11ef0ef33f2f8}{print}} )(struct \mbox{\hyperlink{structqueue}{queue}} $\ast$)
 \begin{DoxyCompactList}\small\item\em Prints the list. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{structqueue_a3dc6fd9cb5325c9d4d4d261b8643fdc8}\label{structqueue_a3dc6fd9cb5325c9d4d4d261b8643fdc8}} 
 void($\ast$ \mbox{\hyperlink{structqueue_a3dc6fd9cb5325c9d4d4d261b8643fdc8}{insert}} )(struct \mbox{\hyperlink{structqueue}{queue}} $\ast$)
 \begin{DoxyCompactList}\small\item\em Inserts an element in an unused roll number place. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{structqueue_a2c4970f3d5f4a6ed832b1366c78f43a1}\label{structqueue_a2c4970f3d5f4a6ed832b1366c78f43a1}} 
 void($\ast$ \mbox{\hyperlink{structqueue_a2c4970f3d5f4a6ed832b1366c78f43a1}{del}} )(struct \mbox{\hyperlink{structqueue}{queue}} $\ast$, int)
 \begin{DoxyCompactList}\small\item\em Delete an element by taking a roll no. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{structqueue_a4524196cd0b29ffa26f2d5c4f50e21c1}\label{structqueue_a4524196cd0b29ffa26f2d5c4f50e21c1}} 
 struct \mbox{\hyperlink{structnode}{node}} $\ast$($\ast$ \mbox{\hyperlink{structqueue_a4524196cd0b29ffa26f2d5c4f50e21c1}{search}} )(struct \mbox{\hyperlink{structqueue}{queue}} $\ast$, int)
 \begin{DoxyCompactList}\small\item\em Searches a node and returns address of that node. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{structqueue_a2d7b7bb8905416de5bda6bb751afb21c}\label{structqueue_a2d7b7bb8905416de5bda6bb751afb21c}} 
 void($\ast$ \mbox{\hyperlink{structqueue_a2d7b7bb8905416de5bda6bb751afb21c}{modify}} )(struct \mbox{\hyperlink{structqueue}{queue}} $\ast$, int)
 \begin{DoxyCompactList}\small\item\em Modify a particular roll number. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{structqueue_ad0788e57f502b3ec0c9ee5f12115c65c}\label{structqueue_ad0788e57f502b3ec0c9ee5f12115c65c}} 
 void($\ast$ \mbox{\hyperlink{structqueue_ad0788e57f502b3ec0c9ee5f12115c65c}{sort}} )(struct \mbox{\hyperlink{structqueue}{queue}} $\ast$)
 \begin{DoxyCompactList}\small\item\em Sorts the list according to the Names in the list. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
@@ -50,6 +39,163 @@ Definition at line 17 of file Q1.\+c.
 
 
 
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structqueue_aacf31622d8c0b68268e71937299d2828}\label{structqueue_aacf31622d8c0b68268e71937299d2828}} 
+\index{queue@{queue}!addnode@{addnode}}
+\index{addnode@{addnode}!queue@{queue}}
+\doxysubsubsection{\texorpdfstring{addnode}{addnode}}
+{\footnotesize\ttfamily void($\ast$ queue\+::addnode) (struct \mbox{\hyperlink{structqueue}{queue}} $\ast$)}
+
+
+
+Add all data into doubly linked list. 
+
+
+
+Definition at line 27 of file Q1.\+c.
+
+\mbox{\Hypertarget{structqueue_a1c35ab8da97fb28defba8b3283f63244}\label{structqueue_a1c35ab8da97fb28defba8b3283f63244}} 
+\index{queue@{queue}!constructor@{constructor}}
+\index{constructor@{constructor}!queue@{queue}}
+\doxysubsubsection{\texorpdfstring{constructor}{constructor}}
+{\footnotesize\ttfamily void($\ast$ queue\+::constructor) (struct \mbox{\hyperlink{structqueue}{queue}} $\ast$)}
+
+
+
+Constructor made in form of fuction pointer to initialize the values. 
+
+
+
+Definition at line 25 of file Q1.\+c.
+
+\mbox{\Hypertarget{structqueue_a2c4970f3d5f4a6ed832b1366c78f43a1}\label{structqueue_a2c4970f3d5f4a6ed832b1366c78f43a1}} 
+\index{queue@{queue}!del@{del}}
+\index{del@{del}!queue@{queue}}
+\doxysubsubsection{\texorpdfstring{del}{del}}
+{\footnotesize\ttfamily void($\ast$ queue\+::del) (struct \mbox{\hyperlink{structqueue}{queue}} $\ast$, int)}
+
+
+
+Delete an element by taking a roll no. 
+
+
+
+Definition at line 33 of file Q1.\+c.
+
+\mbox{\Hypertarget{structqueue_ab6b2ff0accd62dbafa77434c6ff572c6}\label{structqueue_ab6b2ff0accd62dbafa77434c6ff572c6}} 
+\index{queue@{queue}!head@{head}}
+\index{head@{head}!queue@{queue}}
+\doxysubsubsection{\texorpdfstring{head}{head}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{structnode}{node}}$\ast$ queue\+::head}
+
+
+
+Head of linked list. 
+
+
+
+Definition at line 19 of file Q1.\+c.
+
+\mbox{\Hypertarget{structqueue_a3dc6fd9cb5325c9d4d4d261b8643fdc8}\label{structqueue_a3dc6fd9cb5325c9d4d4d261b8643fdc8}} 
+\index{queue@{queue}!insert@{insert}}
+\index{insert@{insert}!queue@{queue}}
+\doxysubsubsection{\texorpdfstring{insert}{insert}}
+{\footnotesize\ttfamily void($\ast$ queue\+::insert) (struct \mbox{\hyperlink{structqueue}{queue}} $\ast$)}
+
+
+
+Inserts an element in an unused roll number place. 
+
+
+
+Definition at line 31 of file Q1.\+c.
+
+\mbox{\Hypertarget{structqueue_a2d7b7bb8905416de5bda6bb751afb21c}\label{structqueue_a2d7b7bb8905416de5bda6bb751afb21c}} 
+\index{queue@{queue}!modify@{modify}}
+\index{modify@{modify}!queue@{queue}}
+\doxysubsubsection{\texorpdfstring{modify}{modify}}
+{\footnotesize\ttfamily void($\ast$ queue\+::modify) (struct \mbox{\hyperlink{structqueue}{queue}} $\ast$, int)}
+
+
+
+Modify a particular roll number. 
+
+
+
+Definition at line 37 of file Q1.\+c.
+
+\mbox{\Hypertarget{structqueue_a835ab2eab237de44a9d11ef0ef33f2f8}\label{structqueue_a835ab2eab237de44a9d11ef0ef33f2f8}} 
+\index{queue@{queue}!print@{print}}
+\index{print@{print}!queue@{queue}}
+\doxysubsubsection{\texorpdfstring{print}{print}}
+{\footnotesize\ttfamily void($\ast$ queue\+::print) (struct \mbox{\hyperlink{structqueue}{queue}} $\ast$)}
+
+
+
+Prints the list. 
+
+
+
+Definition at line 29 of file Q1.\+c.
+
+\mbox{\Hypertarget{structqueue_a4524196cd0b29ffa26f2d5c4f50e21c1}\label{structqueue_a4524196cd0b29ffa26f2d5c4f50e21c1}} 
+\index{queue@{queue}!search@{search}}
+\index{search@{search}!queue@{queue}}
+\doxysubsubsection{\texorpdfstring{search}{search}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{structnode}{node}}$\ast$($\ast$ queue\+::search) (struct \mbox{\hyperlink{structqueue}{queue}} $\ast$, int)}
+
+
+
+Searches a node and returns address of that node. 
+
+
+
+Definition at line 35 of file Q1.\+c.
+
+\mbox{\Hypertarget{structqueue_afb9096840ba43e124b3a58648db557cc}\label{structqueue_afb9096840ba43e124b3a58648db557cc}} 
+\index{queue@{queue}!size@{size}}
+\index{size@{size}!queue@{queue}}
+\doxysubsubsection{\texorpdfstring{size}{size}}
+{\footnotesize\ttfamily int queue\+::size}
+
+
+
+Size of the linked list. 
+
+
+
+Definition at line 23 of file Q1.\+c.
+
+\mbox{\Hypertarget{structqueue_ad0788e57f502b3ec0c9ee5f12115c65c}\label{structqueue_ad0788e57f502b3ec0c9ee5f12115c65c}} 
+\index{queue@{queue}!sort@{sort}}
+\index{sort@{sort}!queue@{queue}}
+\doxysubsubsection{\texorpdfstring{sort}{sort}}
+{\footnotesize\ttfamily void($\ast$ queue\+::sort) (struct \mbox{\hyperlink{structqueue}{queue}} $\ast$)}
+
+
+
+Sorts the list according to the Names in the list. 
+
+
+
+Definition at line 39 of file Q1.\+c.
+
+\mbox{\Hypertarget{structqueue_ac2b88203ae2da21287502fec0392d1ab}\label{structqueue_ac2b88203ae2da21287502fec0392d1ab}} 
+\index{queue@{queue}!tail@{tail}}
+\index{tail@{tail}!queue@{queue}}
+\doxysubsubsection{\texorpdfstring{tail}{tail}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{structnode}{node}}$\ast$ queue\+::tail}
+
+
+
+Tail of the linked list. 
+
+
+
+Definition at line 21 of file Q1.\+c.
+
+
+
 The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-Q1.\+c\end{DoxyCompactItemize}
+\mbox{\hyperlink{Q1_8c}{Q1.\+c}}\end{DoxyCompactItemize}
