@@ -1,0 +1,45 @@
+\hypertarget{compare_8c}{}\doxysection{compare.\+c File Reference}
+\label{compare_8c}\index{compare.c@{compare.c}}
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{compare_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
+\begin{DoxyCompactList}\small\item\em Compares input and decrypted file character by character. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{compare_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}\label{compare_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}} 
+\index{compare.c@{compare.c}!main@{main}}
+\index{main@{main}!compare.c@{compare.c}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Compares input and decrypted file character by character. 
+
+
+
+Definition at line 3 of file compare.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{3           \{}
+\DoxyCodeLine{4    FILE * input=fopen(\textcolor{stringliteral}{"inputfile.txt"},\textcolor{stringliteral}{"r"});}
+\DoxyCodeLine{5    FILE * decrypted=fopen(\textcolor{stringliteral}{"decryptedOutputfile.txt"},\textcolor{stringliteral}{"r"});}
+\DoxyCodeLine{6    \textcolor{keywordtype}{char} a,b;}
+\DoxyCodeLine{7    \textcolor{keywordflow}{while}(!feof(input)\&\&!feof(decrypted))\{}
+\DoxyCodeLine{8       fscanf(input,\textcolor{stringliteral}{"\%c"},\&a);}
+\DoxyCodeLine{9       fscanf(decrypted,\textcolor{stringliteral}{"\%c"},\&b);}
+\DoxyCodeLine{10       \textcolor{keywordflow}{if}(!feof(input)\&\&!feof(decrypted))}
+\DoxyCodeLine{11       printf(\textcolor{stringliteral}{"\%c \%c\(\backslash\)n"},a,b);}
+\DoxyCodeLine{12       \textcolor{keywordflow}{if}(a!=b)\{}
+\DoxyCodeLine{13         printf(\textcolor{stringliteral}{"DEFECTED \%c \%c"},a,b);}
+\DoxyCodeLine{14         \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{15       \}}
+\DoxyCodeLine{16    \}}
+\DoxyCodeLine{17    printf(\textcolor{stringliteral}{"OK!"});}
+\DoxyCodeLine{18 \}}
+
+\end{DoxyCode}

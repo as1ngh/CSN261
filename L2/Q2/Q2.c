@@ -2,6 +2,7 @@
 FILE * file;
 FILE *file2;
 int ** arr;
+//!Function to return the n in nXn input matrix
 int getn(){
     int n=0;
     int temp;
@@ -16,6 +17,7 @@ int getn(){
     }
     return n;
 }
+//!Fuction to return next 2thpower just after n
 int get2(int n){
   int temp;
   for(int i=0;i<32;i++){
@@ -28,6 +30,7 @@ int get2(int n){
 int curr=0;
 int n;
 int max;
+//!Depth First Search algorithm for Quatree
 void dfs(int x1,int y1,int x2,int y2,int **arr,int lev){
     int one=0,zero=0;
     for(int i=x1;i<x2;i++){

@@ -1,4 +1,5 @@
 #include<stdio.h>
+//!Compares input and decrypted file character by character
 int main(){
    FILE * input=fopen("inputfile.txt","r");
    FILE * decrypted=fopen("decryptedOutputfile.txt","r");

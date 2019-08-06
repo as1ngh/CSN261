@@ -1,6 +1,7 @@
 #include<stdio.h>
 FILE * inputfile;
 FILE * outputfile;
+//!Divides the input file in sections of n and encrypt them individualy and print them in output file
 void encrypt(int n,int a,int b){
    inputfile=fopen("inputfile.txt","r");
    outputfile=fopen("outputfile.txt","w");

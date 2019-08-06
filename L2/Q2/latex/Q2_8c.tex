@@ -1,0 +1,256 @@
+\hypertarget{Q2_8c}{}\doxysection{Q2.\+c File Reference}
+\label{Q2_8c}\index{Q2.c@{Q2.c}}
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{Q2_8c_a54e064aed71947e96e8d441900f3fcd7}{getn}} ()
+\begin{DoxyCompactList}\small\item\em Function to return the n in n\+Xn input matrix. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{Q2_8c_a660bb2f97da3042ccd83a8b1c0e4fc39}{get2}} (int \mbox{\hyperlink{Q2_8c_a76f11d9a0a47b94f72c2d0e77fb32240}{n}})
+\begin{DoxyCompactList}\small\item\em Fuction to return next 2thpower just after n. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{Q2_8c_aace5251964e71ae56b9c87b74359153f}{dfs}} (int x1, int y1, int x2, int y2, int $\ast$$\ast$\mbox{\hyperlink{Q2_8c_af66554cfe4dee3bca4a1bffdb60e3637}{arr}}, int lev)
+\begin{DoxyCompactList}\small\item\em Depth First Search algorithm for Quatree. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{Q2_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+F\+I\+LE $\ast$ \mbox{\hyperlink{Q2_8c_a702945180aa732857b380a007a7e2a21}{file}}
+\item 
+F\+I\+LE $\ast$ \mbox{\hyperlink{Q2_8c_aa6655aec9024087d7037e39d18786dbb}{file2}}
+\item 
+int $\ast$$\ast$ \mbox{\hyperlink{Q2_8c_af66554cfe4dee3bca4a1bffdb60e3637}{arr}}
+\item 
+int \mbox{\hyperlink{Q2_8c_a96010e8f175b18e5988b95a0cf09faa1}{curr}} =0
+\item 
+int \mbox{\hyperlink{Q2_8c_a76f11d9a0a47b94f72c2d0e77fb32240}{n}}
+\item 
+int \mbox{\hyperlink{Q2_8c_ae1e1dde676c120fa6d10f3bb2c14059e}{max}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{Q2_8c_aace5251964e71ae56b9c87b74359153f}\label{Q2_8c_aace5251964e71ae56b9c87b74359153f}} 
+\index{Q2.c@{Q2.c}!dfs@{dfs}}
+\index{dfs@{dfs}!Q2.c@{Q2.c}}
+\doxysubsubsection{\texorpdfstring{dfs()}{dfs()}}
+{\footnotesize\ttfamily void dfs (\begin{DoxyParamCaption}\item[{int}]{x1,  }\item[{int}]{y1,  }\item[{int}]{x2,  }\item[{int}]{y2,  }\item[{int $\ast$$\ast$}]{arr,  }\item[{int}]{lev }\end{DoxyParamCaption})}
+
+
+
+Depth First Search algorithm for Quatree. 
+
+
+
+Definition at line 34 of file Q2.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{34                                                        \{}
+\DoxyCodeLine{35     \textcolor{keywordtype}{int} one=0,zero=0;}
+\DoxyCodeLine{36     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i=x1;i<x2;i++)\{}
+\DoxyCodeLine{37        \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} j=y1;j<y2;j++)\{}
+\DoxyCodeLine{38           \textcolor{keywordflow}{if}(\mbox{\hyperlink{Q2_8c_af66554cfe4dee3bca4a1bffdb60e3637}{arr}}[i][j]==1)}
+\DoxyCodeLine{39             one++;}
+\DoxyCodeLine{40           \textcolor{keywordflow}{if}(\mbox{\hyperlink{Q2_8c_af66554cfe4dee3bca4a1bffdb60e3637}{arr}}[i][j]==0)}
+\DoxyCodeLine{41             zero++;}
+\DoxyCodeLine{42        \}}
+\DoxyCodeLine{43     \}}
+\DoxyCodeLine{44     \textcolor{keywordflow}{if}(zero!=0\&\&one!=0)\{}
+\DoxyCodeLine{45           \textcolor{keywordtype}{int} xmid=(x1+x2)/2;}
+\DoxyCodeLine{46           \textcolor{keywordtype}{int} ymid=(y1+y2)/2;}
+\DoxyCodeLine{47           \mbox{\hyperlink{Q2_8c_aace5251964e71ae56b9c87b74359153f}{dfs}}(x1,y1,xmid,ymid,\mbox{\hyperlink{Q2_8c_af66554cfe4dee3bca4a1bffdb60e3637}{arr}},lev+1);}
+\DoxyCodeLine{48           \mbox{\hyperlink{Q2_8c_aace5251964e71ae56b9c87b74359153f}{dfs}}(x1,ymid,xmid,y2,\mbox{\hyperlink{Q2_8c_af66554cfe4dee3bca4a1bffdb60e3637}{arr}},lev+1);}
+\DoxyCodeLine{49           \mbox{\hyperlink{Q2_8c_aace5251964e71ae56b9c87b74359153f}{dfs}}(xmid,y1,x2,ymid,\mbox{\hyperlink{Q2_8c_af66554cfe4dee3bca4a1bffdb60e3637}{arr}},lev+1);}
+\DoxyCodeLine{50           \mbox{\hyperlink{Q2_8c_aace5251964e71ae56b9c87b74359153f}{dfs}}(xmid,ymid,x2,y2,\mbox{\hyperlink{Q2_8c_af66554cfe4dee3bca4a1bffdb60e3637}{arr}},lev+1);}
+\DoxyCodeLine{51           \textcolor{keywordflow}{return};}
+\DoxyCodeLine{52     \}}
+\DoxyCodeLine{53     \textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{54       \mbox{\hyperlink{Q2_8c_a96010e8f175b18e5988b95a0cf09faa1}{curr}}=\mbox{\hyperlink{Q2_8c_a96010e8f175b18e5988b95a0cf09faa1}{curr}}+1;}
+\DoxyCodeLine{55       \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i=x1;i<x2;i++)\{}
+\DoxyCodeLine{56          \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} j=y1;j<y2;j++)\{}
+\DoxyCodeLine{57             \mbox{\hyperlink{Q2_8c_af66554cfe4dee3bca4a1bffdb60e3637}{arr}}[i][j]=\mbox{\hyperlink{Q2_8c_a96010e8f175b18e5988b95a0cf09faa1}{curr}};}
+\DoxyCodeLine{58          \}}
+\DoxyCodeLine{59       \}}
+\DoxyCodeLine{60       \textcolor{keywordflow}{if}(one!=0)\{}
+\DoxyCodeLine{61          printf(\textcolor{stringliteral}{"(\%d, 1, \%d)\(\backslash\)n"},\mbox{\hyperlink{Q2_8c_a96010e8f175b18e5988b95a0cf09faa1}{curr}},lev);}
+\DoxyCodeLine{62       \}}
+\DoxyCodeLine{63       \textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{64         printf(\textcolor{stringliteral}{"(\%d, 0, \%d)\(\backslash\)n"},\mbox{\hyperlink{Q2_8c_a96010e8f175b18e5988b95a0cf09faa1}{curr}},lev);}
+\DoxyCodeLine{65       \}}
+\DoxyCodeLine{66     \}}
+\DoxyCodeLine{67 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{Q2_8c_a660bb2f97da3042ccd83a8b1c0e4fc39}\label{Q2_8c_a660bb2f97da3042ccd83a8b1c0e4fc39}} 
+\index{Q2.c@{Q2.c}!get2@{get2}}
+\index{get2@{get2}!Q2.c@{Q2.c}}
+\doxysubsubsection{\texorpdfstring{get2()}{get2()}}
+{\footnotesize\ttfamily int get2 (\begin{DoxyParamCaption}\item[{int}]{n }\end{DoxyParamCaption})}
+
+
+
+Fuction to return next 2thpower just after n. 
+
+
+
+Definition at line 21 of file Q2.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{21                \{}
+\DoxyCodeLine{22   \textcolor{keywordtype}{int} temp;}
+\DoxyCodeLine{23   \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i=0;i<32;i++)\{}
+\DoxyCodeLine{24       \textcolor{keywordflow}{if}((1<<i)\&\mbox{\hyperlink{Q2_8c_a76f11d9a0a47b94f72c2d0e77fb32240}{n}})}
+\DoxyCodeLine{25          temp=i;}
+\DoxyCodeLine{26   \}}
+\DoxyCodeLine{27   \textcolor{keywordtype}{int} ans=1<<(temp+1);}
+\DoxyCodeLine{28   \textcolor{keywordflow}{return} ans;}
+\DoxyCodeLine{29 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{Q2_8c_a54e064aed71947e96e8d441900f3fcd7}\label{Q2_8c_a54e064aed71947e96e8d441900f3fcd7}} 
+\index{Q2.c@{Q2.c}!getn@{getn}}
+\index{getn@{getn}!Q2.c@{Q2.c}}
+\doxysubsubsection{\texorpdfstring{getn()}{getn()}}
+{\footnotesize\ttfamily int getn (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Function to return the n in n\+Xn input matrix. 
+
+
+
+Definition at line 6 of file Q2.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{6           \{}
+\DoxyCodeLine{7     \textcolor{keywordtype}{int} \mbox{\hyperlink{Q2_8c_a76f11d9a0a47b94f72c2d0e77fb32240}{n}}=0;}
+\DoxyCodeLine{8     \textcolor{keywordtype}{int} temp;}
+\DoxyCodeLine{9     fscanf(\mbox{\hyperlink{Q2_8c_a702945180aa732857b380a007a7e2a21}{file}},\textcolor{stringliteral}{"\%d"},\&temp);}
+\DoxyCodeLine{10     \mbox{\hyperlink{Q2_8c_a76f11d9a0a47b94f72c2d0e77fb32240}{n}}++;}
+\DoxyCodeLine{11     \textcolor{keywordtype}{char} ch;}
+\DoxyCodeLine{12     fscanf(\mbox{\hyperlink{Q2_8c_a702945180aa732857b380a007a7e2a21}{file}},\textcolor{stringliteral}{"\%c"},\&ch);}
+\DoxyCodeLine{13     \textcolor{keywordflow}{while}(ch!=\textcolor{charliteral}{'\(\backslash\)n'})\{}
+\DoxyCodeLine{14        fscanf(\mbox{\hyperlink{Q2_8c_a702945180aa732857b380a007a7e2a21}{file}},\textcolor{stringliteral}{"\%d"},\&temp);}
+\DoxyCodeLine{15        \mbox{\hyperlink{Q2_8c_a76f11d9a0a47b94f72c2d0e77fb32240}{n}}++;}
+\DoxyCodeLine{16        fscanf(\mbox{\hyperlink{Q2_8c_a702945180aa732857b380a007a7e2a21}{file}},\textcolor{stringliteral}{"\%c"},\&ch);}
+\DoxyCodeLine{17     \}}
+\DoxyCodeLine{18     \textcolor{keywordflow}{return} \mbox{\hyperlink{Q2_8c_a76f11d9a0a47b94f72c2d0e77fb32240}{n}};}
+\DoxyCodeLine{19 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{Q2_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}\label{Q2_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}} 
+\index{Q2.c@{Q2.c}!main@{main}}
+\index{main@{main}!Q2.c@{Q2.c}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 68 of file Q2.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{68           \{}
+\DoxyCodeLine{69    \mbox{\hyperlink{Q2_8c_a702945180aa732857b380a007a7e2a21}{file}}=fopen(\textcolor{stringliteral}{"L2\_P2\_inputsample.txt"},\textcolor{stringliteral}{"r"});}
+\DoxyCodeLine{70    \mbox{\hyperlink{Q2_8c_aa6655aec9024087d7037e39d18786dbb}{file2}}=fopen(\textcolor{stringliteral}{"L2\_P2\_inputsample.txt"},\textcolor{stringliteral}{"r"});}
+\DoxyCodeLine{71    \mbox{\hyperlink{Q2_8c_a76f11d9a0a47b94f72c2d0e77fb32240}{n}}=\mbox{\hyperlink{Q2_8c_a54e064aed71947e96e8d441900f3fcd7}{getn}}();}
+\DoxyCodeLine{72    \mbox{\hyperlink{Q2_8c_ae1e1dde676c120fa6d10f3bb2c14059e}{max}}=\mbox{\hyperlink{Q2_8c_a660bb2f97da3042ccd83a8b1c0e4fc39}{get2}}(\mbox{\hyperlink{Q2_8c_a76f11d9a0a47b94f72c2d0e77fb32240}{n}});}
+\DoxyCodeLine{73    \mbox{\hyperlink{Q2_8c_af66554cfe4dee3bca4a1bffdb60e3637}{arr}}=(\textcolor{keywordtype}{int}**)malloc(\mbox{\hyperlink{Q2_8c_ae1e1dde676c120fa6d10f3bb2c14059e}{max}}*\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{int}*));}
+\DoxyCodeLine{74    \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i=0;i<\mbox{\hyperlink{Q2_8c_ae1e1dde676c120fa6d10f3bb2c14059e}{max}};i++)\{}
+\DoxyCodeLine{75       \mbox{\hyperlink{Q2_8c_af66554cfe4dee3bca4a1bffdb60e3637}{arr}}[i]=(\textcolor{keywordtype}{int}*)malloc(\mbox{\hyperlink{Q2_8c_ae1e1dde676c120fa6d10f3bb2c14059e}{max}}*\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{int}));}
+\DoxyCodeLine{76    \}}
+\DoxyCodeLine{77    fseek(\mbox{\hyperlink{Q2_8c_a702945180aa732857b380a007a7e2a21}{file}}, 0, SEEK\_SET);}
+\DoxyCodeLine{78    \textcolor{comment}{//memset(arr,0,sizeof(arr));}}
+\DoxyCodeLine{79    \textcolor{keywordtype}{int} i=\mbox{\hyperlink{Q2_8c_ae1e1dde676c120fa6d10f3bb2c14059e}{max}}-\/\mbox{\hyperlink{Q2_8c_a76f11d9a0a47b94f72c2d0e77fb32240}{n}};}
+\DoxyCodeLine{80    \textcolor{keywordtype}{int} j=\mbox{\hyperlink{Q2_8c_ae1e1dde676c120fa6d10f3bb2c14059e}{max}}-\/\mbox{\hyperlink{Q2_8c_a76f11d9a0a47b94f72c2d0e77fb32240}{n}};}
+\DoxyCodeLine{81    \textcolor{keywordflow}{while}(!feof(\mbox{\hyperlink{Q2_8c_a702945180aa732857b380a007a7e2a21}{file}}))\{}
+\DoxyCodeLine{82         \textcolor{keywordtype}{int} t;}
+\DoxyCodeLine{83         \textcolor{keywordtype}{char} ch;}
+\DoxyCodeLine{84         fscanf(\mbox{\hyperlink{Q2_8c_a702945180aa732857b380a007a7e2a21}{file}},\textcolor{stringliteral}{"\%d"},\&t);}
+\DoxyCodeLine{85         fscanf(\mbox{\hyperlink{Q2_8c_a702945180aa732857b380a007a7e2a21}{file}},\textcolor{stringliteral}{"\%c"},\&ch);}
+\DoxyCodeLine{86         \mbox{\hyperlink{Q2_8c_af66554cfe4dee3bca4a1bffdb60e3637}{arr}}[i][j]=t;}
+\DoxyCodeLine{87         \textcolor{keywordflow}{if}(j==\mbox{\hyperlink{Q2_8c_ae1e1dde676c120fa6d10f3bb2c14059e}{max}}-\/1)\{}
+\DoxyCodeLine{88            j=\mbox{\hyperlink{Q2_8c_ae1e1dde676c120fa6d10f3bb2c14059e}{max}}-\/\mbox{\hyperlink{Q2_8c_a76f11d9a0a47b94f72c2d0e77fb32240}{n}};}
+\DoxyCodeLine{89            i++;}
+\DoxyCodeLine{90         \}}
+\DoxyCodeLine{91         \textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{92           j++;}
+\DoxyCodeLine{93         \}}
+\DoxyCodeLine{94         \textcolor{keywordflow}{if}(i==\mbox{\hyperlink{Q2_8c_ae1e1dde676c120fa6d10f3bb2c14059e}{max}})}
+\DoxyCodeLine{95           \textcolor{keywordflow}{break};}
+\DoxyCodeLine{96    \}}
+\DoxyCodeLine{97    \mbox{\hyperlink{Q2_8c_aace5251964e71ae56b9c87b74359153f}{dfs}}(0,0,\mbox{\hyperlink{Q2_8c_ae1e1dde676c120fa6d10f3bb2c14059e}{max}},\mbox{\hyperlink{Q2_8c_ae1e1dde676c120fa6d10f3bb2c14059e}{max}},\mbox{\hyperlink{Q2_8c_af66554cfe4dee3bca4a1bffdb60e3637}{arr}},1);}
+\DoxyCodeLine{98    \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i=0;i<\mbox{\hyperlink{Q2_8c_ae1e1dde676c120fa6d10f3bb2c14059e}{max}};i++)\{}
+\DoxyCodeLine{99      \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} j=0;j<\mbox{\hyperlink{Q2_8c_ae1e1dde676c120fa6d10f3bb2c14059e}{max}};j++)}
+\DoxyCodeLine{100        printf(\textcolor{stringliteral}{"\%d\(\backslash\)t"},(*(*(\mbox{\hyperlink{Q2_8c_af66554cfe4dee3bca4a1bffdb60e3637}{arr}}+i)+j)));}
+\DoxyCodeLine{101      printf(\textcolor{stringliteral}{"\(\backslash\)n"});}
+\DoxyCodeLine{102    \}}
+\DoxyCodeLine{103 \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{Q2_8c_af66554cfe4dee3bca4a1bffdb60e3637}\label{Q2_8c_af66554cfe4dee3bca4a1bffdb60e3637}} 
+\index{Q2.c@{Q2.c}!arr@{arr}}
+\index{arr@{arr}!Q2.c@{Q2.c}}
+\doxysubsubsection{\texorpdfstring{arr}{arr}}
+{\footnotesize\ttfamily int$\ast$$\ast$ arr}
+
+
+
+Definition at line 4 of file Q2.\+c.
+
+\mbox{\Hypertarget{Q2_8c_a96010e8f175b18e5988b95a0cf09faa1}\label{Q2_8c_a96010e8f175b18e5988b95a0cf09faa1}} 
+\index{Q2.c@{Q2.c}!curr@{curr}}
+\index{curr@{curr}!Q2.c@{Q2.c}}
+\doxysubsubsection{\texorpdfstring{curr}{curr}}
+{\footnotesize\ttfamily int curr =0}
+
+
+
+Definition at line 30 of file Q2.\+c.
+
+\mbox{\Hypertarget{Q2_8c_a702945180aa732857b380a007a7e2a21}\label{Q2_8c_a702945180aa732857b380a007a7e2a21}} 
+\index{Q2.c@{Q2.c}!file@{file}}
+\index{file@{file}!Q2.c@{Q2.c}}
+\doxysubsubsection{\texorpdfstring{file}{file}}
+{\footnotesize\ttfamily F\+I\+LE$\ast$ file}
+
+
+
+Definition at line 2 of file Q2.\+c.
+
+\mbox{\Hypertarget{Q2_8c_aa6655aec9024087d7037e39d18786dbb}\label{Q2_8c_aa6655aec9024087d7037e39d18786dbb}} 
+\index{Q2.c@{Q2.c}!file2@{file2}}
+\index{file2@{file2}!Q2.c@{Q2.c}}
+\doxysubsubsection{\texorpdfstring{file2}{file2}}
+{\footnotesize\ttfamily F\+I\+LE$\ast$ file2}
+
+
+
+Definition at line 3 of file Q2.\+c.
+
+\mbox{\Hypertarget{Q2_8c_ae1e1dde676c120fa6d10f3bb2c14059e}\label{Q2_8c_ae1e1dde676c120fa6d10f3bb2c14059e}} 
+\index{Q2.c@{Q2.c}!max@{max}}
+\index{max@{max}!Q2.c@{Q2.c}}
+\doxysubsubsection{\texorpdfstring{max}{max}}
+{\footnotesize\ttfamily int max}
+
+
+
+Definition at line 32 of file Q2.\+c.
+
+\mbox{\Hypertarget{Q2_8c_a76f11d9a0a47b94f72c2d0e77fb32240}\label{Q2_8c_a76f11d9a0a47b94f72c2d0e77fb32240}} 
+\index{Q2.c@{Q2.c}!n@{n}}
+\index{n@{n}!Q2.c@{Q2.c}}
+\doxysubsubsection{\texorpdfstring{n}{n}}
+{\footnotesize\ttfamily int n}
+
+
+
+Definition at line 31 of file Q2.\+c.
+
