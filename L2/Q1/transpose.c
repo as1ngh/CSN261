@@ -29,5 +29,11 @@ void encrypt(int n,int a,int b){
 }
 int main(){
     int n=5,a=3,b=2;
+    printf("ENTER n:");
+    scanf("%d",&n);
+    printf("ENTER a:");
+    scanf("%d",&a);
+    printf("ENTER b:");
+    scanf("%d",&b);
     encrypt(n,a,b);
 }
