@@ -1,4 +1,5 @@
 #include<stdio.h>
+#include<stdlib.h>
 FILE * inputfile;
 FILE * outputfile;
 //!Divides the input file in sections of n and decrypt them individualy and print them in decrypted output file
@@ -36,13 +37,13 @@ int main(int argc, const char *argv[]){
         return 0;
     }
     int n,a,b;
-    n=argv[1];
+    n=atoi(argv[1]);
     if(n<1){
         printf("ERROR: INVALID N\n");
         return 0;
     }
-    a=argv[2];
-    b=argv[3];
+    a=atoi(argv[2]);
+    b=atoi(argv[3]);
     inputfile=fopen(argv[4],"r");
     decrypt(n,a,b);
 }
