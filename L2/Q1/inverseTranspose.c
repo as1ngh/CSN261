@@ -3,7 +3,7 @@ FILE * inputfile;
 FILE * outputfile;
 //!Divides the input file in sections of n and decrypt them individualy and print them in decrypted output file
 void decrypt(int n,int a,int b){
-   inputfile=fopen("outputfile.txt","r");
+
    outputfile=fopen("decryptedOutputfile.txt","w");
    char *line=(char*)malloc(n*sizeof(char));
    int k=0;
@@ -30,13 +30,19 @@ void decrypt(int n,int a,int b){
      fprintf(outputfile,"%s",oline);
    }
 }
-int main(){
-    int n=5,a=3,b=2;
-    printf("ENTER n:");
-    scanf("%d",&n);
-    printf("ENTER a:");
-    scanf("%d",&a);
-    printf("ENTER b:");
-    scanf("%d",&b);
+int main(int argc, const char *argv[]){
+    if(argc<5){
+        printf("ERROR: LESS INPUT\n");
+        return 0;
+    }
+    int n,a,b;
+    n=argv[1];
+    if(n<1){
+        printf("ERROR: INVALID N\n");
+        return 0;
+    }
+    a=argv[2];
+    b=argv[3];
+    inputfile=fopen(argv[4],"r");
     decrypt(n,a,b);
 }
