@@ -1,0 +1,453 @@
+\hypertarget{Q1_8cpp}{}\doxysection{Q1.\+cpp File Reference}
+\label{Q1_8cpp}\index{Q1.cpp@{Q1.cpp}}
+{\ttfamily \#include $<$bits/stdc++.\+h$>$}\newline
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structNode}{Node}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{Q1_8cpp_ab87bacfdad76e61b9412d7124be44c1c}{Color}} \{ \mbox{\hyperlink{Q1_8cpp_ab87bacfdad76e61b9412d7124be44c1caf80f9a890089d211842d59625e561f88}{R\+ED}}, 
+\mbox{\hyperlink{Q1_8cpp_ab87bacfdad76e61b9412d7124be44c1caf77fb67151d0c18d397069ad8c271ba3}{B\+L\+A\+CK}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structNode}{Node}} $\ast$ \mbox{\hyperlink{Q1_8cpp_abe81f552fab842006b2f71cd6f5246d0}{B\+S\+T\+Insert}} (\mbox{\hyperlink{structNode}{Node}} $\ast$root, \mbox{\hyperlink{structNode}{Node}} $\ast$pt)
+\item 
+void \mbox{\hyperlink{Q1_8cpp_a93c1b37db09853dd65466a9fc9ed81eb}{rotate\+Left}} (\mbox{\hyperlink{structNode}{Node}} $\ast$\&root, \mbox{\hyperlink{structNode}{Node}} $\ast$\&pt)
+\item 
+void \mbox{\hyperlink{Q1_8cpp_a1ee9cbbd35d29eb918d2b1aa773084b4}{rotate\+Right}} (\mbox{\hyperlink{structNode}{Node}} $\ast$\&root, \mbox{\hyperlink{structNode}{Node}} $\ast$\&pt)
+\item 
+void \mbox{\hyperlink{Q1_8cpp_a281d236e76a39812f0a0198fdd203402}{insert\+R\+E\+D\+B\+L\+A\+CK}} (\mbox{\hyperlink{structNode}{Node}} $\ast$\&root, int data)
+\item 
+int \mbox{\hyperlink{Q1_8cpp_ad6873a1d31fa813893aa9c54eb042444}{h}} (\mbox{\hyperlink{structNode}{Node}} $\ast$root)
+\item 
+\mbox{\hyperlink{structNode}{Node}} $\ast$ \mbox{\hyperlink{Q1_8cpp_a4a88834ddba6dc1340de6c4c823bddd9}{Build\+From\+Inorder}} (int start, int end)
+\item 
+void \mbox{\hyperlink{Q1_8cpp_a350e14bb33773bfbed1ddc56443d63e8}{fillinorder}} (\mbox{\hyperlink{structNode}{Node}} $\ast$root)
+\item 
+void \mbox{\hyperlink{Q1_8cpp_a0bd7fb5b88b1f3d29253d19f40fdce75}{print}} (\mbox{\hyperlink{structNode}{Node}} $\ast$root)
+\item 
+void \mbox{\hyperlink{Q1_8cpp_ae3c850a79172c8f41599c62ee88b61a0}{printtree}} (\mbox{\hyperlink{structNode}{Node}} $\ast$root, int pos, bool temp)
+\item 
+\mbox{\hyperlink{structNode}{Node}} $\ast$ \mbox{\hyperlink{Q1_8cpp_ae46544f642266177224013fda9277000}{create\+A\+VL}} (\mbox{\hyperlink{structNode}{Node}} $\ast$root\+B\+ST)
+\item 
+int \mbox{\hyperlink{Q1_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+vector$<$ int $>$ \mbox{\hyperlink{Q1_8cpp_a4f0255938e614d719baf735abcc1e6b1}{inorder}}
+\item 
+int \mbox{\hyperlink{Q1_8cpp_ad12fc34ce789bce6c8a05d8a17138534}{height}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{Q1_8cpp_ab87bacfdad76e61b9412d7124be44c1c}\label{Q1_8cpp_ab87bacfdad76e61b9412d7124be44c1c}} 
+\index{Q1.cpp@{Q1.cpp}!Color@{Color}}
+\index{Color@{Color}!Q1.cpp@{Q1.cpp}}
+\doxysubsubsection{\texorpdfstring{Color}{Color}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{Q1_8cpp_ab87bacfdad76e61b9412d7124be44c1c}{Color}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RED@{RED}!Q1.cpp@{Q1.cpp}}\index{Q1.cpp@{Q1.cpp}!RED@{RED}}}\mbox{\Hypertarget{Q1_8cpp_ab87bacfdad76e61b9412d7124be44c1caf80f9a890089d211842d59625e561f88}\label{Q1_8cpp_ab87bacfdad76e61b9412d7124be44c1caf80f9a890089d211842d59625e561f88}} 
+R\+ED&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BLACK@{BLACK}!Q1.cpp@{Q1.cpp}}\index{Q1.cpp@{Q1.cpp}!BLACK@{BLACK}}}\mbox{\Hypertarget{Q1_8cpp_ab87bacfdad76e61b9412d7124be44c1caf77fb67151d0c18d397069ad8c271ba3}\label{Q1_8cpp_ab87bacfdad76e61b9412d7124be44c1caf77fb67151d0c18d397069ad8c271ba3}} 
+B\+L\+A\+CK&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 3 of file Q1.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{3 \{\mbox{\hyperlink{Q1_8cpp_ab87bacfdad76e61b9412d7124be44c1caf80f9a890089d211842d59625e561f88}{RED}}, \mbox{\hyperlink{Q1_8cpp_ab87bacfdad76e61b9412d7124be44c1caf77fb67151d0c18d397069ad8c271ba3}{BLACK}}\};}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{Q1_8cpp_abe81f552fab842006b2f71cd6f5246d0}\label{Q1_8cpp_abe81f552fab842006b2f71cd6f5246d0}} 
+\index{Q1.cpp@{Q1.cpp}!BSTInsert@{BSTInsert}}
+\index{BSTInsert@{BSTInsert}!Q1.cpp@{Q1.cpp}}
+\doxysubsubsection{\texorpdfstring{BSTInsert()}{BSTInsert()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structNode}{Node}}$\ast$ B\+S\+T\+Insert (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structNode}{Node}} $\ast$}]{root,  }\item[{\mbox{\hyperlink{structNode}{Node}} $\ast$}]{pt }\end{DoxyParamCaption})}
+
+
+
+Definition at line 19 of file Q1.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{19                                      \{}
+\DoxyCodeLine{20     \textcolor{keywordflow}{if} (root == NULL)}
+\DoxyCodeLine{21        \textcolor{keywordflow}{return} pt;}
+\DoxyCodeLine{22     \textcolor{keywordflow}{if} (pt-\/>\mbox{\hyperlink{structNode_a87c003c9f600e3fc58e6e90835f0b605}{data}} < root-\/>\mbox{\hyperlink{structNode_a87c003c9f600e3fc58e6e90835f0b605}{data}})\{}
+\DoxyCodeLine{23         root-\/>\mbox{\hyperlink{structNode_ab8c667ac8fdb120ed4c031682a9cdaee}{left}}  = \mbox{\hyperlink{Q1_8cpp_abe81f552fab842006b2f71cd6f5246d0}{BSTInsert}}(root-\/>\mbox{\hyperlink{structNode_ab8c667ac8fdb120ed4c031682a9cdaee}{left}}, pt);}
+\DoxyCodeLine{24         root-\/>\mbox{\hyperlink{structNode_ab8c667ac8fdb120ed4c031682a9cdaee}{left}}-\/>\mbox{\hyperlink{structNode_ad8184598cdea70e4bbdfd76f2b0f9e85}{parent}} = root;}
+\DoxyCodeLine{25     \}}
+\DoxyCodeLine{26     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (pt-\/>\mbox{\hyperlink{structNode_a87c003c9f600e3fc58e6e90835f0b605}{data}} > root-\/>\mbox{\hyperlink{structNode_a87c003c9f600e3fc58e6e90835f0b605}{data}})\{}
+\DoxyCodeLine{27         root-\/>\mbox{\hyperlink{structNode_a7328862eaa6dea28018326549b3294d3}{right}} = \mbox{\hyperlink{Q1_8cpp_abe81f552fab842006b2f71cd6f5246d0}{BSTInsert}}(root-\/>\mbox{\hyperlink{structNode_a7328862eaa6dea28018326549b3294d3}{right}}, pt);}
+\DoxyCodeLine{28         root-\/>\mbox{\hyperlink{structNode_a7328862eaa6dea28018326549b3294d3}{right}}-\/>\mbox{\hyperlink{structNode_ad8184598cdea70e4bbdfd76f2b0f9e85}{parent}} = root;}
+\DoxyCodeLine{29     \}}
+\DoxyCodeLine{30     \textcolor{keywordflow}{return} root;}
+\DoxyCodeLine{31 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{Q1_8cpp_a4a88834ddba6dc1340de6c4c823bddd9}\label{Q1_8cpp_a4a88834ddba6dc1340de6c4c823bddd9}} 
+\index{Q1.cpp@{Q1.cpp}!BuildFromInorder@{BuildFromInorder}}
+\index{BuildFromInorder@{BuildFromInorder}!Q1.cpp@{Q1.cpp}}
+\doxysubsubsection{\texorpdfstring{BuildFromInorder()}{BuildFromInorder()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structNode}{Node}}$\ast$ Build\+From\+Inorder (\begin{DoxyParamCaption}\item[{int}]{start,  }\item[{int}]{end }\end{DoxyParamCaption})}
+
+
+
+Definition at line 124 of file Q1.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{124                                           \{}
+\DoxyCodeLine{125   \textcolor{keywordflow}{if}(start>end)\{}
+\DoxyCodeLine{126      \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{127   \}}
+\DoxyCodeLine{128   \textcolor{keywordtype}{int} mid=(start+end)/2;}
+\DoxyCodeLine{129   \mbox{\hyperlink{structNode}{Node}}*root=\textcolor{keyword}{new} \mbox{\hyperlink{structNode}{Node}}(\mbox{\hyperlink{Q1_8cpp_a4f0255938e614d719baf735abcc1e6b1}{inorder}}[mid]);}
+\DoxyCodeLine{130   root-\/>\mbox{\hyperlink{structNode_ab8c667ac8fdb120ed4c031682a9cdaee}{left}}=\mbox{\hyperlink{Q1_8cpp_a4a88834ddba6dc1340de6c4c823bddd9}{BuildFromInorder}}(start,mid-\/1);}
+\DoxyCodeLine{131   root-\/>\mbox{\hyperlink{structNode_a7328862eaa6dea28018326549b3294d3}{right}}=\mbox{\hyperlink{Q1_8cpp_a4a88834ddba6dc1340de6c4c823bddd9}{BuildFromInorder}}(mid+1,end);}
+\DoxyCodeLine{132   \textcolor{keywordflow}{return} root;}
+\DoxyCodeLine{133 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{Q1_8cpp_ae46544f642266177224013fda9277000}\label{Q1_8cpp_ae46544f642266177224013fda9277000}} 
+\index{Q1.cpp@{Q1.cpp}!createAVL@{createAVL}}
+\index{createAVL@{createAVL}!Q1.cpp@{Q1.cpp}}
+\doxysubsubsection{\texorpdfstring{createAVL()}{createAVL()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structNode}{Node}}$\ast$ create\+A\+VL (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structNode}{Node}} $\ast$}]{root\+B\+ST }\end{DoxyParamCaption})}
+
+
+
+Definition at line 167 of file Q1.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{167                              \{}
+\DoxyCodeLine{168    \mbox{\hyperlink{Q1_8cpp_a4f0255938e614d719baf735abcc1e6b1}{inorder}}.clear();}
+\DoxyCodeLine{169    \mbox{\hyperlink{Q1_8cpp_a350e14bb33773bfbed1ddc56443d63e8}{fillinorder}}(rootBST);}
+\DoxyCodeLine{170    \mbox{\hyperlink{structNode}{Node}}*root=\mbox{\hyperlink{Q1_8cpp_a4a88834ddba6dc1340de6c4c823bddd9}{BuildFromInorder}}(0,\mbox{\hyperlink{Q1_8cpp_a4f0255938e614d719baf735abcc1e6b1}{inorder}}.size()-\/1);}
+\DoxyCodeLine{171    \textcolor{keywordflow}{return} root;}
+\DoxyCodeLine{172 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{Q1_8cpp_a350e14bb33773bfbed1ddc56443d63e8}\label{Q1_8cpp_a350e14bb33773bfbed1ddc56443d63e8}} 
+\index{Q1.cpp@{Q1.cpp}!fillinorder@{fillinorder}}
+\index{fillinorder@{fillinorder}!Q1.cpp@{Q1.cpp}}
+\doxysubsubsection{\texorpdfstring{fillinorder()}{fillinorder()}}
+{\footnotesize\ttfamily void fillinorder (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structNode}{Node}} $\ast$}]{root }\end{DoxyParamCaption})}
+
+
+
+Definition at line 136 of file Q1.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{136                            \{}
+\DoxyCodeLine{137    \textcolor{keywordflow}{if}(root==0)}
+\DoxyCodeLine{138      \textcolor{keywordflow}{return};}
+\DoxyCodeLine{139    \mbox{\hyperlink{Q1_8cpp_a350e14bb33773bfbed1ddc56443d63e8}{fillinorder}}(root-\/>\mbox{\hyperlink{structNode_ab8c667ac8fdb120ed4c031682a9cdaee}{left}});}
+\DoxyCodeLine{140    \mbox{\hyperlink{Q1_8cpp_a4f0255938e614d719baf735abcc1e6b1}{inorder}}.push\_back(root-\/>\mbox{\hyperlink{structNode_a87c003c9f600e3fc58e6e90835f0b605}{data}});}
+\DoxyCodeLine{141    \mbox{\hyperlink{Q1_8cpp_a350e14bb33773bfbed1ddc56443d63e8}{fillinorder}}(root-\/>\mbox{\hyperlink{structNode_a7328862eaa6dea28018326549b3294d3}{right}});}
+\DoxyCodeLine{142    \textcolor{keywordflow}{return};}
+\DoxyCodeLine{143 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{Q1_8cpp_ad6873a1d31fa813893aa9c54eb042444}\label{Q1_8cpp_ad6873a1d31fa813893aa9c54eb042444}} 
+\index{Q1.cpp@{Q1.cpp}!h@{h}}
+\index{h@{h}!Q1.cpp@{Q1.cpp}}
+\doxysubsubsection{\texorpdfstring{h()}{h()}}
+{\footnotesize\ttfamily int h (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structNode}{Node}} $\ast$}]{root }\end{DoxyParamCaption})}
+
+
+
+Definition at line 118 of file Q1.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{118                  \{}
+\DoxyCodeLine{119   \textcolor{keywordflow}{if}(root==0)}
+\DoxyCodeLine{120     \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{121   \textcolor{keywordtype}{int} temp=max(\mbox{\hyperlink{Q1_8cpp_ad6873a1d31fa813893aa9c54eb042444}{h}}(root-\/>\mbox{\hyperlink{structNode_ab8c667ac8fdb120ed4c031682a9cdaee}{left}}),\mbox{\hyperlink{Q1_8cpp_ad6873a1d31fa813893aa9c54eb042444}{h}}(root-\/>\mbox{\hyperlink{structNode_a7328862eaa6dea28018326549b3294d3}{right}}));}
+\DoxyCodeLine{122   \textcolor{keywordflow}{return} temp+1;}
+\DoxyCodeLine{123 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{Q1_8cpp_a281d236e76a39812f0a0198fdd203402}\label{Q1_8cpp_a281d236e76a39812f0a0198fdd203402}} 
+\index{Q1.cpp@{Q1.cpp}!insertREDBLACK@{insertREDBLACK}}
+\index{insertREDBLACK@{insertREDBLACK}!Q1.cpp@{Q1.cpp}}
+\doxysubsubsection{\texorpdfstring{insertREDBLACK()}{insertREDBLACK()}}
+{\footnotesize\ttfamily void insert\+R\+E\+D\+B\+L\+A\+CK (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structNode}{Node}} $\ast$\&}]{root,  }\item[{int}]{data }\end{DoxyParamCaption})}
+
+
+
+Definition at line 67 of file Q1.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{67                                            \{}
+\DoxyCodeLine{68     \mbox{\hyperlink{structNode}{Node}} *pt = \textcolor{keyword}{new} \mbox{\hyperlink{structNode}{Node}}(data);}
+\DoxyCodeLine{69     root = \mbox{\hyperlink{Q1_8cpp_abe81f552fab842006b2f71cd6f5246d0}{BSTInsert}}(root, pt);}
+\DoxyCodeLine{70     \mbox{\hyperlink{structNode}{Node}} *parentNode = NULL;}
+\DoxyCodeLine{71     \mbox{\hyperlink{structNode}{Node}} *grandNode = NULL;}
+\DoxyCodeLine{72     \textcolor{keywordflow}{while} ((pt != root) \&\& (pt-\/>\mbox{\hyperlink{structNode_ab4722f06caea56c23245657a13b616b3}{color}} != \mbox{\hyperlink{Q1_8cpp_ab87bacfdad76e61b9412d7124be44c1caf77fb67151d0c18d397069ad8c271ba3}{BLACK}}) \&\& (pt-\/>\mbox{\hyperlink{structNode_ad8184598cdea70e4bbdfd76f2b0f9e85}{parent}}-\/>\mbox{\hyperlink{structNode_ab4722f06caea56c23245657a13b616b3}{color}} == \mbox{\hyperlink{Q1_8cpp_ab87bacfdad76e61b9412d7124be44c1caf80f9a890089d211842d59625e561f88}{RED}}))\{}
+\DoxyCodeLine{73         parentNode = pt-\/>\mbox{\hyperlink{structNode_ad8184598cdea70e4bbdfd76f2b0f9e85}{parent}};}
+\DoxyCodeLine{74         grandNode = pt-\/>\mbox{\hyperlink{structNode_ad8184598cdea70e4bbdfd76f2b0f9e85}{parent}}-\/>\mbox{\hyperlink{structNode_ad8184598cdea70e4bbdfd76f2b0f9e85}{parent}};}
+\DoxyCodeLine{75         \textcolor{keywordflow}{if} (parentNode == grandNode-\/>\mbox{\hyperlink{structNode_ab8c667ac8fdb120ed4c031682a9cdaee}{left}})\{}
+\DoxyCodeLine{76             \mbox{\hyperlink{structNode}{Node}} *uncle\_pt = grandNode-\/>\mbox{\hyperlink{structNode_a7328862eaa6dea28018326549b3294d3}{right}};}
+\DoxyCodeLine{77             \textcolor{keywordflow}{if} (uncle\_pt != NULL \&\& uncle\_pt-\/>\mbox{\hyperlink{structNode_ab4722f06caea56c23245657a13b616b3}{color}} == \mbox{\hyperlink{Q1_8cpp_ab87bacfdad76e61b9412d7124be44c1caf80f9a890089d211842d59625e561f88}{RED}})\{}
+\DoxyCodeLine{78                 grandNode-\/>\mbox{\hyperlink{structNode_ab4722f06caea56c23245657a13b616b3}{color}} = \mbox{\hyperlink{Q1_8cpp_ab87bacfdad76e61b9412d7124be44c1caf80f9a890089d211842d59625e561f88}{RED}};}
+\DoxyCodeLine{79                 parentNode-\/>\mbox{\hyperlink{structNode_ab4722f06caea56c23245657a13b616b3}{color}} = \mbox{\hyperlink{Q1_8cpp_ab87bacfdad76e61b9412d7124be44c1caf77fb67151d0c18d397069ad8c271ba3}{BLACK}};}
+\DoxyCodeLine{80                 uncle\_pt-\/>\mbox{\hyperlink{structNode_ab4722f06caea56c23245657a13b616b3}{color}} = \mbox{\hyperlink{Q1_8cpp_ab87bacfdad76e61b9412d7124be44c1caf77fb67151d0c18d397069ad8c271ba3}{BLACK}};}
+\DoxyCodeLine{81                 pt = grandNode;}
+\DoxyCodeLine{82             \}}
+\DoxyCodeLine{83             \textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{84                 \textcolor{keywordflow}{if} (pt == parentNode-\/>\mbox{\hyperlink{structNode_a7328862eaa6dea28018326549b3294d3}{right}})\{}
+\DoxyCodeLine{85                     \mbox{\hyperlink{Q1_8cpp_a93c1b37db09853dd65466a9fc9ed81eb}{rotateLeft}}(root, parentNode);}
+\DoxyCodeLine{86                     pt = parentNode;}
+\DoxyCodeLine{87                     parentNode = pt-\/>\mbox{\hyperlink{structNode_ad8184598cdea70e4bbdfd76f2b0f9e85}{parent}};}
+\DoxyCodeLine{88                 \}}
+\DoxyCodeLine{89                 \mbox{\hyperlink{Q1_8cpp_a1ee9cbbd35d29eb918d2b1aa773084b4}{rotateRight}}(root, grandNode);}
+\DoxyCodeLine{90                 swap(parentNode-\/>\mbox{\hyperlink{structNode_ab4722f06caea56c23245657a13b616b3}{color}}, grandNode-\/>\mbox{\hyperlink{structNode_ab4722f06caea56c23245657a13b616b3}{color}});}
+\DoxyCodeLine{91                 pt = parentNode;}
+\DoxyCodeLine{92             \}}
+\DoxyCodeLine{93         \}}
+\DoxyCodeLine{94         \textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{95             \mbox{\hyperlink{structNode}{Node}} *uncle\_pt = grandNode-\/>\mbox{\hyperlink{structNode_ab8c667ac8fdb120ed4c031682a9cdaee}{left}};}
+\DoxyCodeLine{96             \textcolor{keywordflow}{if} ((uncle\_pt != NULL) \&\& (uncle\_pt-\/>\mbox{\hyperlink{structNode_ab4722f06caea56c23245657a13b616b3}{color}} == \mbox{\hyperlink{Q1_8cpp_ab87bacfdad76e61b9412d7124be44c1caf80f9a890089d211842d59625e561f88}{RED}}))\{}
+\DoxyCodeLine{97                 grandNode-\/>\mbox{\hyperlink{structNode_ab4722f06caea56c23245657a13b616b3}{color}} = \mbox{\hyperlink{Q1_8cpp_ab87bacfdad76e61b9412d7124be44c1caf80f9a890089d211842d59625e561f88}{RED}};}
+\DoxyCodeLine{98                 parentNode-\/>\mbox{\hyperlink{structNode_ab4722f06caea56c23245657a13b616b3}{color}} = \mbox{\hyperlink{Q1_8cpp_ab87bacfdad76e61b9412d7124be44c1caf77fb67151d0c18d397069ad8c271ba3}{BLACK}};}
+\DoxyCodeLine{99                 uncle\_pt-\/>\mbox{\hyperlink{structNode_ab4722f06caea56c23245657a13b616b3}{color}} = \mbox{\hyperlink{Q1_8cpp_ab87bacfdad76e61b9412d7124be44c1caf77fb67151d0c18d397069ad8c271ba3}{BLACK}};}
+\DoxyCodeLine{100                 pt = grandNode;}
+\DoxyCodeLine{101             \}}
+\DoxyCodeLine{102             \textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{103                 \textcolor{keywordflow}{if} (pt == parentNode-\/>\mbox{\hyperlink{structNode_ab8c667ac8fdb120ed4c031682a9cdaee}{left}})\{}
+\DoxyCodeLine{104                     \mbox{\hyperlink{Q1_8cpp_a1ee9cbbd35d29eb918d2b1aa773084b4}{rotateRight}}(root, parentNode);}
+\DoxyCodeLine{105                     pt = parentNode;}
+\DoxyCodeLine{106                     parentNode = pt-\/>\mbox{\hyperlink{structNode_ad8184598cdea70e4bbdfd76f2b0f9e85}{parent}};}
+\DoxyCodeLine{107                 \}}
+\DoxyCodeLine{108                 \mbox{\hyperlink{Q1_8cpp_a93c1b37db09853dd65466a9fc9ed81eb}{rotateLeft}}(root, grandNode);}
+\DoxyCodeLine{109                 swap(parentNode-\/>\mbox{\hyperlink{structNode_ab4722f06caea56c23245657a13b616b3}{color}}, grandNode-\/>\mbox{\hyperlink{structNode_ab4722f06caea56c23245657a13b616b3}{color}});}
+\DoxyCodeLine{110                 pt = parentNode;}
+\DoxyCodeLine{111             \}}
+\DoxyCodeLine{112         \}}
+\DoxyCodeLine{113     \}}
+\DoxyCodeLine{114     root-\/>\mbox{\hyperlink{structNode_ab4722f06caea56c23245657a13b616b3}{color}} = \mbox{\hyperlink{Q1_8cpp_ab87bacfdad76e61b9412d7124be44c1caf77fb67151d0c18d397069ad8c271ba3}{BLACK}};}
+\DoxyCodeLine{115 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{Q1_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}\label{Q1_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}} 
+\index{Q1.cpp@{Q1.cpp}!main@{main}}
+\index{main@{main}!Q1.cpp@{Q1.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 173 of file Q1.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{173           \{}
+\DoxyCodeLine{174      \mbox{\hyperlink{structNode}{Node}}*rootBST=0;}
+\DoxyCodeLine{175      \mbox{\hyperlink{structNode}{Node}}*rootREDBLACK=0;}
+\DoxyCodeLine{176      \mbox{\hyperlink{structNode}{Node}}*rootAVL=0;}
+\DoxyCodeLine{177      \textcolor{keywordtype}{bool} temp=\textcolor{keyword}{true};}
+\DoxyCodeLine{178      \textcolor{keywordflow}{while}(temp)\{}
+\DoxyCodeLine{179         cout<<\textcolor{stringliteral}{"ENTER CHOICE:"}<<endl;}
+\DoxyCodeLine{180         cout<<\textcolor{stringliteral}{"1:INSERTION IN BST AND RED BLACK TREE:"}<<endl;}
+\DoxyCodeLine{181         cout<<\textcolor{stringliteral}{"2:CREATE AVL FROM INORDER:"}<<endl;}
+\DoxyCodeLine{182         cout<<\textcolor{stringliteral}{"3:PRINT IN ORDER OF BST AVL AND RED BLACK TREE:"}<<endl;}
+\DoxyCodeLine{183         cout<<\textcolor{stringliteral}{"4:LEVEL PRINT OF ALL:"}<<endl;}
+\DoxyCodeLine{184         cout<<\textcolor{stringliteral}{"-\/1:EXIT:"}<<endl;}
+\DoxyCodeLine{185         \textcolor{keywordtype}{int} choice;}
+\DoxyCodeLine{186         cin>>choice;}
+\DoxyCodeLine{187         \textcolor{keywordflow}{if}(choice==1)\{}
+\DoxyCodeLine{188            \textcolor{keywordtype}{int} data;}
+\DoxyCodeLine{189            cout<<\textcolor{stringliteral}{"DATA:"};}
+\DoxyCodeLine{190            cin>>data;}
+\DoxyCodeLine{191            rootBST=\mbox{\hyperlink{Q1_8cpp_abe81f552fab842006b2f71cd6f5246d0}{BSTInsert}}(rootBST,\textcolor{keyword}{new} \mbox{\hyperlink{structNode}{Node}}(data));}
+\DoxyCodeLine{192            \mbox{\hyperlink{Q1_8cpp_a281d236e76a39812f0a0198fdd203402}{insertREDBLACK}}(rootREDBLACK,data);}
+\DoxyCodeLine{193            rootAVL=\mbox{\hyperlink{Q1_8cpp_ae46544f642266177224013fda9277000}{createAVL}}(rootBST);}
+\DoxyCodeLine{194         \}}
+\DoxyCodeLine{195         \textcolor{keywordflow}{if}(choice==2)\{}
+\DoxyCodeLine{196           cout<<\textcolor{stringliteral}{"TREE CREATED.."}<<endl;}
+\DoxyCodeLine{197         \}}
+\DoxyCodeLine{198         \textcolor{keywordflow}{if}(choice==3)\{}
+\DoxyCodeLine{199           cout<<\textcolor{stringliteral}{"BST"}<<endl;}
+\DoxyCodeLine{200           \mbox{\hyperlink{Q1_8cpp_a0bd7fb5b88b1f3d29253d19f40fdce75}{print}}(rootBST);}
+\DoxyCodeLine{201           cout<<endl;}
+\DoxyCodeLine{202           cout<<\textcolor{stringliteral}{"AVL"}<<endl;}
+\DoxyCodeLine{203           \mbox{\hyperlink{Q1_8cpp_a0bd7fb5b88b1f3d29253d19f40fdce75}{print}}(rootAVL);}
+\DoxyCodeLine{204           cout<<endl;}
+\DoxyCodeLine{205           cout<<\textcolor{stringliteral}{"RED BLACK"}<<endl;}
+\DoxyCodeLine{206           \mbox{\hyperlink{Q1_8cpp_a0bd7fb5b88b1f3d29253d19f40fdce75}{print}}(rootREDBLACK);}
+\DoxyCodeLine{207           cout<<endl;}
+\DoxyCodeLine{208         \}}
+\DoxyCodeLine{209         \textcolor{keywordflow}{if}(choice==4)\{}
+\DoxyCodeLine{210           cout<<\textcolor{stringliteral}{"BST"}<<endl;}
+\DoxyCodeLine{211           \mbox{\hyperlink{Q1_8cpp_ad12fc34ce789bce6c8a05d8a17138534}{height}}=\mbox{\hyperlink{Q1_8cpp_ad6873a1d31fa813893aa9c54eb042444}{h}}(rootBST);}
+\DoxyCodeLine{212           \mbox{\hyperlink{Q1_8cpp_ae3c850a79172c8f41599c62ee88b61a0}{printtree}}(rootBST,0,\textcolor{keyword}{false});}
+\DoxyCodeLine{213           cout<<endl;}
+\DoxyCodeLine{214           cout<<\textcolor{stringliteral}{"AVL"}<<endl;}
+\DoxyCodeLine{215           \mbox{\hyperlink{Q1_8cpp_ad12fc34ce789bce6c8a05d8a17138534}{height}}=\mbox{\hyperlink{Q1_8cpp_ad6873a1d31fa813893aa9c54eb042444}{h}}(rootAVL);}
+\DoxyCodeLine{216           \mbox{\hyperlink{Q1_8cpp_ae3c850a79172c8f41599c62ee88b61a0}{printtree}}(rootAVL,0,\textcolor{keyword}{false});}
+\DoxyCodeLine{217           cout<<endl;}
+\DoxyCodeLine{218           cout<<\textcolor{stringliteral}{"RED BLACK"}<<endl;}
+\DoxyCodeLine{219           \mbox{\hyperlink{Q1_8cpp_ae3c850a79172c8f41599c62ee88b61a0}{printtree}}(rootREDBLACK,0,\textcolor{keyword}{true});}
+\DoxyCodeLine{220           cout<<endl;}
+\DoxyCodeLine{221         \}}
+\DoxyCodeLine{222         \textcolor{keywordflow}{if}(choice==-\/1)\{}
+\DoxyCodeLine{223           temp=\textcolor{keyword}{false};}
+\DoxyCodeLine{224         \}}
+\DoxyCodeLine{225      \}}
+\DoxyCodeLine{226 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{Q1_8cpp_a0bd7fb5b88b1f3d29253d19f40fdce75}\label{Q1_8cpp_a0bd7fb5b88b1f3d29253d19f40fdce75}} 
+\index{Q1.cpp@{Q1.cpp}!print@{print}}
+\index{print@{print}!Q1.cpp@{Q1.cpp}}
+\doxysubsubsection{\texorpdfstring{print()}{print()}}
+{\footnotesize\ttfamily void print (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structNode}{Node}} $\ast$}]{root }\end{DoxyParamCaption})}
+
+
+
+Definition at line 145 of file Q1.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{145                        \{}
+\DoxyCodeLine{146   \textcolor{keywordflow}{if}(root==0)\{}
+\DoxyCodeLine{147      \textcolor{keywordflow}{return};}
+\DoxyCodeLine{148   \}}
+\DoxyCodeLine{149   \mbox{\hyperlink{Q1_8cpp_a0bd7fb5b88b1f3d29253d19f40fdce75}{print}}(root-\/>\mbox{\hyperlink{structNode_ab8c667ac8fdb120ed4c031682a9cdaee}{left}});}
+\DoxyCodeLine{150    cout<<root-\/>\mbox{\hyperlink{structNode_a87c003c9f600e3fc58e6e90835f0b605}{data}}<<endl;}
+\DoxyCodeLine{151   \mbox{\hyperlink{Q1_8cpp_a0bd7fb5b88b1f3d29253d19f40fdce75}{print}}(root-\/>\mbox{\hyperlink{structNode_a7328862eaa6dea28018326549b3294d3}{right}});}
+\DoxyCodeLine{152   \textcolor{keywordflow}{return};}
+\DoxyCodeLine{153 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{Q1_8cpp_ae3c850a79172c8f41599c62ee88b61a0}\label{Q1_8cpp_ae3c850a79172c8f41599c62ee88b61a0}} 
+\index{Q1.cpp@{Q1.cpp}!printtree@{printtree}}
+\index{printtree@{printtree}!Q1.cpp@{Q1.cpp}}
+\doxysubsubsection{\texorpdfstring{printtree()}{printtree()}}
+{\footnotesize\ttfamily void printtree (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structNode}{Node}} $\ast$}]{root,  }\item[{int}]{pos,  }\item[{bool}]{temp }\end{DoxyParamCaption})}
+
+
+
+Definition at line 154 of file Q1.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{154                                            \{}
+\DoxyCodeLine{155   \textcolor{keywordflow}{if}(root==0)}
+\DoxyCodeLine{156     \textcolor{keywordflow}{return};}
+\DoxyCodeLine{157   \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i=0;i<pos;i++)}
+\DoxyCodeLine{158     cout<<\textcolor{stringliteral}{"\(\backslash\)t"};}
+\DoxyCodeLine{159   cout<<root-\/>\mbox{\hyperlink{structNode_a87c003c9f600e3fc58e6e90835f0b605}{data}}<<\textcolor{stringliteral}{" "};}
+\DoxyCodeLine{160   \textcolor{keywordflow}{if}(temp)}
+\DoxyCodeLine{161     cout<<root-\/>\mbox{\hyperlink{structNode_ab4722f06caea56c23245657a13b616b3}{color}}<<endl;}
+\DoxyCodeLine{162   \textcolor{keywordflow}{else}}
+\DoxyCodeLine{163     cout<<\mbox{\hyperlink{Q1_8cpp_ad12fc34ce789bce6c8a05d8a17138534}{height}}-\/pos<<endl;}
+\DoxyCodeLine{164   \mbox{\hyperlink{Q1_8cpp_ae3c850a79172c8f41599c62ee88b61a0}{printtree}}(root-\/>\mbox{\hyperlink{structNode_ab8c667ac8fdb120ed4c031682a9cdaee}{left}},pos+1,temp);}
+\DoxyCodeLine{165   \mbox{\hyperlink{Q1_8cpp_ae3c850a79172c8f41599c62ee88b61a0}{printtree}}(root-\/>\mbox{\hyperlink{structNode_a7328862eaa6dea28018326549b3294d3}{right}},pos+1,temp);}
+\DoxyCodeLine{166 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{Q1_8cpp_a93c1b37db09853dd65466a9fc9ed81eb}\label{Q1_8cpp_a93c1b37db09853dd65466a9fc9ed81eb}} 
+\index{Q1.cpp@{Q1.cpp}!rotateLeft@{rotateLeft}}
+\index{rotateLeft@{rotateLeft}!Q1.cpp@{Q1.cpp}}
+\doxysubsubsection{\texorpdfstring{rotateLeft()}{rotateLeft()}}
+{\footnotesize\ttfamily void rotate\+Left (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structNode}{Node}} $\ast$\&}]{root,  }\item[{\mbox{\hyperlink{structNode}{Node}} $\ast$\&}]{pt }\end{DoxyParamCaption})}
+
+
+
+Definition at line 35 of file Q1.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{35                                         \{}
+\DoxyCodeLine{36     \mbox{\hyperlink{structNode}{Node}} *parentRight = pt-\/>\mbox{\hyperlink{structNode_a7328862eaa6dea28018326549b3294d3}{right}};}
+\DoxyCodeLine{37     pt-\/>\mbox{\hyperlink{structNode_a7328862eaa6dea28018326549b3294d3}{right}} = parentRight-\/>\mbox{\hyperlink{structNode_ab8c667ac8fdb120ed4c031682a9cdaee}{left}};}
+\DoxyCodeLine{38     \textcolor{keywordflow}{if} (pt-\/>\mbox{\hyperlink{structNode_a7328862eaa6dea28018326549b3294d3}{right}} != NULL)}
+\DoxyCodeLine{39         pt-\/>\mbox{\hyperlink{structNode_a7328862eaa6dea28018326549b3294d3}{right}}-\/>\mbox{\hyperlink{structNode_ad8184598cdea70e4bbdfd76f2b0f9e85}{parent}} = pt;}
+\DoxyCodeLine{40     parentRight-\/>\mbox{\hyperlink{structNode_ad8184598cdea70e4bbdfd76f2b0f9e85}{parent}} = pt-\/>\mbox{\hyperlink{structNode_ad8184598cdea70e4bbdfd76f2b0f9e85}{parent}};}
+\DoxyCodeLine{41     \textcolor{keywordflow}{if} (pt-\/>\mbox{\hyperlink{structNode_ad8184598cdea70e4bbdfd76f2b0f9e85}{parent}} == NULL)}
+\DoxyCodeLine{42         root = parentRight;}
+\DoxyCodeLine{43     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (pt == pt-\/>\mbox{\hyperlink{structNode_ad8184598cdea70e4bbdfd76f2b0f9e85}{parent}}-\/>\mbox{\hyperlink{structNode_ab8c667ac8fdb120ed4c031682a9cdaee}{left}})}
+\DoxyCodeLine{44         pt-\/>\mbox{\hyperlink{structNode_ad8184598cdea70e4bbdfd76f2b0f9e85}{parent}}-\/>\mbox{\hyperlink{structNode_ab8c667ac8fdb120ed4c031682a9cdaee}{left}} = parentRight;}
+\DoxyCodeLine{45     \textcolor{keywordflow}{else}}
+\DoxyCodeLine{46         pt-\/>\mbox{\hyperlink{structNode_ad8184598cdea70e4bbdfd76f2b0f9e85}{parent}}-\/>\mbox{\hyperlink{structNode_a7328862eaa6dea28018326549b3294d3}{right}} = parentRight;}
+\DoxyCodeLine{47     parentRight-\/>\mbox{\hyperlink{structNode_ab8c667ac8fdb120ed4c031682a9cdaee}{left}} = pt;}
+\DoxyCodeLine{48     pt-\/>\mbox{\hyperlink{structNode_ad8184598cdea70e4bbdfd76f2b0f9e85}{parent}} = parentRight;}
+\DoxyCodeLine{49 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{Q1_8cpp_a1ee9cbbd35d29eb918d2b1aa773084b4}\label{Q1_8cpp_a1ee9cbbd35d29eb918d2b1aa773084b4}} 
+\index{Q1.cpp@{Q1.cpp}!rotateRight@{rotateRight}}
+\index{rotateRight@{rotateRight}!Q1.cpp@{Q1.cpp}}
+\doxysubsubsection{\texorpdfstring{rotateRight()}{rotateRight()}}
+{\footnotesize\ttfamily void rotate\+Right (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structNode}{Node}} $\ast$\&}]{root,  }\item[{\mbox{\hyperlink{structNode}{Node}} $\ast$\&}]{pt }\end{DoxyParamCaption})}
+
+
+
+Definition at line 51 of file Q1.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{51                                          \{}
+\DoxyCodeLine{52     \mbox{\hyperlink{structNode}{Node}} *parentLeft = pt-\/>\mbox{\hyperlink{structNode_ab8c667ac8fdb120ed4c031682a9cdaee}{left}};}
+\DoxyCodeLine{53     pt-\/>\mbox{\hyperlink{structNode_ab8c667ac8fdb120ed4c031682a9cdaee}{left}} = parentLeft-\/>\mbox{\hyperlink{structNode_a7328862eaa6dea28018326549b3294d3}{right}};}
+\DoxyCodeLine{54     \textcolor{keywordflow}{if} (pt-\/>\mbox{\hyperlink{structNode_ab8c667ac8fdb120ed4c031682a9cdaee}{left}} != NULL)}
+\DoxyCodeLine{55         pt-\/>\mbox{\hyperlink{structNode_ab8c667ac8fdb120ed4c031682a9cdaee}{left}}-\/>\mbox{\hyperlink{structNode_ad8184598cdea70e4bbdfd76f2b0f9e85}{parent}} = pt;}
+\DoxyCodeLine{56     parentLeft-\/>\mbox{\hyperlink{structNode_ad8184598cdea70e4bbdfd76f2b0f9e85}{parent}} = pt-\/>\mbox{\hyperlink{structNode_ad8184598cdea70e4bbdfd76f2b0f9e85}{parent}};}
+\DoxyCodeLine{57     \textcolor{keywordflow}{if} (pt-\/>\mbox{\hyperlink{structNode_ad8184598cdea70e4bbdfd76f2b0f9e85}{parent}} == NULL)}
+\DoxyCodeLine{58         root = parentLeft;}
+\DoxyCodeLine{59     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (pt == pt-\/>\mbox{\hyperlink{structNode_ad8184598cdea70e4bbdfd76f2b0f9e85}{parent}}-\/>\mbox{\hyperlink{structNode_ab8c667ac8fdb120ed4c031682a9cdaee}{left}})}
+\DoxyCodeLine{60         pt-\/>\mbox{\hyperlink{structNode_ad8184598cdea70e4bbdfd76f2b0f9e85}{parent}}-\/>\mbox{\hyperlink{structNode_ab8c667ac8fdb120ed4c031682a9cdaee}{left}} = parentLeft;}
+\DoxyCodeLine{61     \textcolor{keywordflow}{else}}
+\DoxyCodeLine{62         pt-\/>\mbox{\hyperlink{structNode_ad8184598cdea70e4bbdfd76f2b0f9e85}{parent}}-\/>\mbox{\hyperlink{structNode_a7328862eaa6dea28018326549b3294d3}{right}} = parentLeft;}
+\DoxyCodeLine{63     parentLeft-\/>\mbox{\hyperlink{structNode_a7328862eaa6dea28018326549b3294d3}{right}} = pt;}
+\DoxyCodeLine{64     pt-\/>\mbox{\hyperlink{structNode_ad8184598cdea70e4bbdfd76f2b0f9e85}{parent}} = parentLeft;}
+\DoxyCodeLine{65 \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{Q1_8cpp_ad12fc34ce789bce6c8a05d8a17138534}\label{Q1_8cpp_ad12fc34ce789bce6c8a05d8a17138534}} 
+\index{Q1.cpp@{Q1.cpp}!height@{height}}
+\index{height@{height}!Q1.cpp@{Q1.cpp}}
+\doxysubsubsection{\texorpdfstring{height}{height}}
+{\footnotesize\ttfamily int height}
+
+
+
+Definition at line 117 of file Q1.\+cpp.
+
+\mbox{\Hypertarget{Q1_8cpp_a4f0255938e614d719baf735abcc1e6b1}\label{Q1_8cpp_a4f0255938e614d719baf735abcc1e6b1}} 
+\index{Q1.cpp@{Q1.cpp}!inorder@{inorder}}
+\index{inorder@{inorder}!Q1.cpp@{Q1.cpp}}
+\doxysubsubsection{\texorpdfstring{inorder}{inorder}}
+{\footnotesize\ttfamily vector$<$int$>$ inorder}
+
+
+
+Definition at line 116 of file Q1.\+cpp.
+

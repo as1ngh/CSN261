@@ -1,0 +1,70 @@
+\hypertarget{Q2_8cpp}{}\doxysection{Q2.\+cpp File Reference}
+\label{Q2_8cpp}\index{Q2.cpp@{Q2.cpp}}
+{\ttfamily \#include $<$bits/stdc++.\+h$>$}\newline
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef long long int \mbox{\hyperlink{Q2_8cpp_a1ae942ac54ad537f51a8f7d3723f61d7}{ll}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{Q2_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{Q2_8cpp_a1ae942ac54ad537f51a8f7d3723f61d7}\label{Q2_8cpp_a1ae942ac54ad537f51a8f7d3723f61d7}} 
+\index{Q2.cpp@{Q2.cpp}!ll@{ll}}
+\index{ll@{ll}!Q2.cpp@{Q2.cpp}}
+\doxysubsubsection{\texorpdfstring{ll}{ll}}
+{\footnotesize\ttfamily typedef long long int \mbox{\hyperlink{Q2_8cpp_a1ae942ac54ad537f51a8f7d3723f61d7}{ll}}}
+
+
+
+Definition at line 3 of file Q2.\+cpp.
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{Q2_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}\label{Q2_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}} 
+\index{Q2.cpp@{Q2.cpp}!main@{main}}
+\index{main@{main}!Q2.cpp@{Q2.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 4 of file Q2.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{4           \{}
+\DoxyCodeLine{5        \textcolor{keywordtype}{int} n;}
+\DoxyCodeLine{6        cin>>n;}
+\DoxyCodeLine{7        map<int,vector<ll>>map;}
+\DoxyCodeLine{8        \mbox{\hyperlink{Q2_8cpp_a1ae942ac54ad537f51a8f7d3723f61d7}{ll}} x=0;}
+\DoxyCodeLine{9        map[0].push\_back(0);}
+\DoxyCodeLine{10        \textcolor{keywordflow}{for}(\mbox{\hyperlink{Q2_8cpp_a1ae942ac54ad537f51a8f7d3723f61d7}{ll}} i=1;i<=n;i++)\{}
+\DoxyCodeLine{11             \mbox{\hyperlink{Q2_8cpp_a1ae942ac54ad537f51a8f7d3723f61d7}{ll}} a;}
+\DoxyCodeLine{12             cin>>a;}
+\DoxyCodeLine{13             x=x\string^a;}
+\DoxyCodeLine{14             map[x].push\_back(i);}
+\DoxyCodeLine{15        \}}
+\DoxyCodeLine{16        \mbox{\hyperlink{Q2_8cpp_a1ae942ac54ad537f51a8f7d3723f61d7}{ll}} ans=0;}
+\DoxyCodeLine{17        \textcolor{keywordflow}{for}(\textcolor{keyword}{auto} it=map.begin();it!=map.end();it++)\{}
+\DoxyCodeLine{18           \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i=0;i<(it-\/>second).size();i++)\{}
+\DoxyCodeLine{19              \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} j=i+1;j<(it-\/>second).size();j++)\{}
+\DoxyCodeLine{20                  \textcolor{keywordtype}{int} end=(it-\/>second).at(j);}
+\DoxyCodeLine{21                  \textcolor{keywordtype}{int} start=(it-\/>second).at(i)+1;}
+\DoxyCodeLine{22                  \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} l=start+1;l<=end;l++)\{}
+\DoxyCodeLine{23                     cout<<start<<\textcolor{stringliteral}{" "}<<l<<\textcolor{stringliteral}{" "}<<end<<endl;}
+\DoxyCodeLine{24                     ans++;}
+\DoxyCodeLine{25                  \}}
+\DoxyCodeLine{26                \}}
+\DoxyCodeLine{27           \}}
+\DoxyCodeLine{28        \}}
+\DoxyCodeLine{29        cout<<ans<<endl;}
+\DoxyCodeLine{30 \}}
+
+\end{DoxyCode}
