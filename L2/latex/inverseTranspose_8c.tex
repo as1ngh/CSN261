@@ -1,0 +1,113 @@
+\hypertarget{inverseTranspose_8c}{}\doxysection{inverse\+Transpose.\+c File Reference}
+\label{inverseTranspose_8c}\index{inverseTranspose.c@{inverseTranspose.c}}
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{inverseTranspose_8c_a769ebfd4cf527491a206465fe53e5def}{decrypt}} (int n, int a, int b)
+\begin{DoxyCompactList}\small\item\em Divides the input file in sections of n and decrypt them individualy and print them in decrypted output file. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{inverseTranspose_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+F\+I\+LE $\ast$ \mbox{\hyperlink{inverseTranspose_8c_a0317bf3a0c2b9ad47aa27b1b35737176}{inputfile}}
+\item 
+F\+I\+LE $\ast$ \mbox{\hyperlink{inverseTranspose_8c_a0522de1f60e980190c256b21ef43b8b7}{outputfile}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{inverseTranspose_8c_a769ebfd4cf527491a206465fe53e5def}\label{inverseTranspose_8c_a769ebfd4cf527491a206465fe53e5def}} 
+\index{inverseTranspose.c@{inverseTranspose.c}!decrypt@{decrypt}}
+\index{decrypt@{decrypt}!inverseTranspose.c@{inverseTranspose.c}}
+\doxysubsubsection{\texorpdfstring{decrypt()}{decrypt()}}
+{\footnotesize\ttfamily void decrypt (\begin{DoxyParamCaption}\item[{int}]{n,  }\item[{int}]{a,  }\item[{int}]{b }\end{DoxyParamCaption})}
+
+
+
+Divides the input file in sections of n and decrypt them individualy and print them in decrypted output file. 
+
+
+
+Definition at line 5 of file inverse\+Transpose.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{5                                \{}
+\DoxyCodeLine{6    \mbox{\hyperlink{inverseTranspose_8c_a0317bf3a0c2b9ad47aa27b1b35737176}{inputfile}}=fopen(\textcolor{stringliteral}{"outputfile.txt"},\textcolor{stringliteral}{"r"});}
+\DoxyCodeLine{7    \mbox{\hyperlink{inverseTranspose_8c_a0522de1f60e980190c256b21ef43b8b7}{outputfile}}=fopen(\textcolor{stringliteral}{"decryptedOutputfile.txt"},\textcolor{stringliteral}{"w"});}
+\DoxyCodeLine{8    \textcolor{keywordtype}{char} *line=(\textcolor{keywordtype}{char}*)malloc(n*\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{char}));}
+\DoxyCodeLine{9    \textcolor{keywordtype}{int} k=0;}
+\DoxyCodeLine{10    \textcolor{keywordflow}{while}(!feof(\mbox{\hyperlink{inverseTranspose_8c_a0317bf3a0c2b9ad47aa27b1b35737176}{inputfile}}))\{}
+\DoxyCodeLine{11      \textcolor{keywordtype}{char} ch;}
+\DoxyCodeLine{12      \textcolor{keywordtype}{char} * line=malloc(n*\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{char}));}
+\DoxyCodeLine{13         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i=0;i<n;i++)\{}
+\DoxyCodeLine{14             \textcolor{keywordflow}{if}(!feof(\mbox{\hyperlink{inverseTranspose_8c_a0317bf3a0c2b9ad47aa27b1b35737176}{inputfile}}))}
+\DoxyCodeLine{15                fscanf(\mbox{\hyperlink{inverseTranspose_8c_a0317bf3a0c2b9ad47aa27b1b35737176}{inputfile}},\textcolor{stringliteral}{"\%c"},\&ch);}
+\DoxyCodeLine{16             \textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{17                 \textcolor{keywordflow}{break};}
+\DoxyCodeLine{18             \}}
+\DoxyCodeLine{19             line[i]=ch;}
+\DoxyCodeLine{20         \}}
+\DoxyCodeLine{21      \textcolor{keywordtype}{char} *oline=malloc(n*\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{char}));}
+\DoxyCodeLine{22      \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i=0;i<n;i++)\{}
+\DoxyCodeLine{23         \textcolor{keywordtype}{int} j=(a*i+b)\%n;}
+\DoxyCodeLine{24         \textcolor{keywordflow}{if}(line[i]!=\textcolor{charliteral}{'-\/'})}
+\DoxyCodeLine{25         oline[j]=line[i];}
+\DoxyCodeLine{26         \textcolor{keywordflow}{else}}
+\DoxyCodeLine{27         oline[j]=\textcolor{charliteral}{'\(\backslash\)0'};}
+\DoxyCodeLine{28      \}}
+\DoxyCodeLine{29      printf(\textcolor{stringliteral}{"\%s\(\backslash\)n"},oline);}
+\DoxyCodeLine{30      fprintf(\mbox{\hyperlink{inverseTranspose_8c_a0522de1f60e980190c256b21ef43b8b7}{outputfile}},\textcolor{stringliteral}{"\%s"},oline);}
+\DoxyCodeLine{31    \}}
+\DoxyCodeLine{32 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{inverseTranspose_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}\label{inverseTranspose_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}} 
+\index{inverseTranspose.c@{inverseTranspose.c}!main@{main}}
+\index{main@{main}!inverseTranspose.c@{inverseTranspose.c}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 33 of file inverse\+Transpose.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{33           \{}
+\DoxyCodeLine{34     \textcolor{keywordtype}{int} n=5,a=3,b=2;}
+\DoxyCodeLine{35     printf(\textcolor{stringliteral}{"ENTER n:"});}
+\DoxyCodeLine{36     scanf(\textcolor{stringliteral}{"\%d"},\&n);}
+\DoxyCodeLine{37     printf(\textcolor{stringliteral}{"ENTER a:"});}
+\DoxyCodeLine{38     scanf(\textcolor{stringliteral}{"\%d"},\&a);}
+\DoxyCodeLine{39     printf(\textcolor{stringliteral}{"ENTER b:"});}
+\DoxyCodeLine{40     scanf(\textcolor{stringliteral}{"\%d"},\&b);}
+\DoxyCodeLine{41     \mbox{\hyperlink{inverseTranspose_8c_a769ebfd4cf527491a206465fe53e5def}{decrypt}}(n,a,b);}
+\DoxyCodeLine{42 \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{inverseTranspose_8c_a0317bf3a0c2b9ad47aa27b1b35737176}\label{inverseTranspose_8c_a0317bf3a0c2b9ad47aa27b1b35737176}} 
+\index{inverseTranspose.c@{inverseTranspose.c}!inputfile@{inputfile}}
+\index{inputfile@{inputfile}!inverseTranspose.c@{inverseTranspose.c}}
+\doxysubsubsection{\texorpdfstring{inputfile}{inputfile}}
+{\footnotesize\ttfamily F\+I\+LE$\ast$ inputfile}
+
+
+
+Definition at line 2 of file inverse\+Transpose.\+c.
+
+\mbox{\Hypertarget{inverseTranspose_8c_a0522de1f60e980190c256b21ef43b8b7}\label{inverseTranspose_8c_a0522de1f60e980190c256b21ef43b8b7}} 
+\index{inverseTranspose.c@{inverseTranspose.c}!outputfile@{outputfile}}
+\index{outputfile@{outputfile}!inverseTranspose.c@{inverseTranspose.c}}
+\doxysubsubsection{\texorpdfstring{outputfile}{outputfile}}
+{\footnotesize\ttfamily F\+I\+LE$\ast$ outputfile}
+
+
+
+Definition at line 3 of file inverse\+Transpose.\+c.
+

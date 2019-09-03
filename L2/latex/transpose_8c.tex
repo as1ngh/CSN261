@@ -1,0 +1,111 @@
+\hypertarget{transpose_8c}{}\doxysection{transpose.\+c File Reference}
+\label{transpose_8c}\index{transpose.c@{transpose.c}}
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{transpose_8c_afe57ef5627a6259b4dd7e9a5fbc7265c}{encrypt}} (int n, int a, int b)
+\begin{DoxyCompactList}\small\item\em Divides the input file in sections of n and encrypt them individualy and print them in output file. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{transpose_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+F\+I\+LE $\ast$ \mbox{\hyperlink{transpose_8c_a0317bf3a0c2b9ad47aa27b1b35737176}{inputfile}}
+\item 
+F\+I\+LE $\ast$ \mbox{\hyperlink{transpose_8c_a0522de1f60e980190c256b21ef43b8b7}{outputfile}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{transpose_8c_afe57ef5627a6259b4dd7e9a5fbc7265c}\label{transpose_8c_afe57ef5627a6259b4dd7e9a5fbc7265c}} 
+\index{transpose.c@{transpose.c}!encrypt@{encrypt}}
+\index{encrypt@{encrypt}!transpose.c@{transpose.c}}
+\doxysubsubsection{\texorpdfstring{encrypt()}{encrypt()}}
+{\footnotesize\ttfamily void encrypt (\begin{DoxyParamCaption}\item[{int}]{n,  }\item[{int}]{a,  }\item[{int}]{b }\end{DoxyParamCaption})}
+
+
+
+Divides the input file in sections of n and encrypt them individualy and print them in output file. 
+
+
+
+Definition at line 5 of file transpose.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{5                                \{}
+\DoxyCodeLine{6    \mbox{\hyperlink{transpose_8c_a0317bf3a0c2b9ad47aa27b1b35737176}{inputfile}}=fopen(\textcolor{stringliteral}{"inputfile.txt"},\textcolor{stringliteral}{"r"});}
+\DoxyCodeLine{7    \mbox{\hyperlink{transpose_8c_a0522de1f60e980190c256b21ef43b8b7}{outputfile}}=fopen(\textcolor{stringliteral}{"outputfile.txt"},\textcolor{stringliteral}{"w"});}
+\DoxyCodeLine{8    \textcolor{keywordtype}{char} *line=(\textcolor{keywordtype}{char}*)malloc(n*\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{char}));}
+\DoxyCodeLine{9    \textcolor{keywordtype}{int} k=0;}
+\DoxyCodeLine{10    \textcolor{keywordflow}{while}(!feof(\mbox{\hyperlink{transpose_8c_a0317bf3a0c2b9ad47aa27b1b35737176}{inputfile}}))\{}
+\DoxyCodeLine{11      \textcolor{keywordtype}{char} ch=\textcolor{charliteral}{'\(\backslash\)0'};}
+\DoxyCodeLine{12      \textcolor{keywordtype}{char} * line=malloc(n*\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{char}));}
+\DoxyCodeLine{13         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i=0;i<n;i++)\{}
+\DoxyCodeLine{14             ch=\textcolor{charliteral}{'-\/'};}
+\DoxyCodeLine{15             \textcolor{keywordflow}{if}(!feof(\mbox{\hyperlink{transpose_8c_a0317bf3a0c2b9ad47aa27b1b35737176}{inputfile}}))}
+\DoxyCodeLine{16                fscanf(\mbox{\hyperlink{transpose_8c_a0317bf3a0c2b9ad47aa27b1b35737176}{inputfile}},\textcolor{stringliteral}{"\%c"},\&ch);}
+\DoxyCodeLine{17             \textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{18                ch=\textcolor{charliteral}{'-\/'};}
+\DoxyCodeLine{19             \}}
+\DoxyCodeLine{20             line[i]=ch;}
+\DoxyCodeLine{21         \}}
+\DoxyCodeLine{22      \textcolor{keywordtype}{char} *oline=malloc(n*\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{char}));}
+\DoxyCodeLine{23      \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i=0;i<n;i++)\{}
+\DoxyCodeLine{24         \textcolor{keywordtype}{int} j=(a*i+b)\%n;}
+\DoxyCodeLine{25         oline[i]=line[j];}
+\DoxyCodeLine{26      \}}
+\DoxyCodeLine{27      printf(\textcolor{stringliteral}{"\%s\(\backslash\)n"},oline);}
+\DoxyCodeLine{28      fprintf(\mbox{\hyperlink{transpose_8c_a0522de1f60e980190c256b21ef43b8b7}{outputfile}},\textcolor{stringliteral}{"\%s"},oline);}
+\DoxyCodeLine{29    \}}
+\DoxyCodeLine{30 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{transpose_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}\label{transpose_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}} 
+\index{transpose.c@{transpose.c}!main@{main}}
+\index{main@{main}!transpose.c@{transpose.c}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 31 of file transpose.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{31           \{}
+\DoxyCodeLine{32     \textcolor{keywordtype}{int} n=5,a=3,b=2;}
+\DoxyCodeLine{33     printf(\textcolor{stringliteral}{"ENTER n:"});}
+\DoxyCodeLine{34     scanf(\textcolor{stringliteral}{"\%d"},\&n);}
+\DoxyCodeLine{35     printf(\textcolor{stringliteral}{"ENTER a:"});}
+\DoxyCodeLine{36     scanf(\textcolor{stringliteral}{"\%d"},\&a);}
+\DoxyCodeLine{37     printf(\textcolor{stringliteral}{"ENTER b:"});}
+\DoxyCodeLine{38     scanf(\textcolor{stringliteral}{"\%d"},\&b);}
+\DoxyCodeLine{39     \mbox{\hyperlink{transpose_8c_afe57ef5627a6259b4dd7e9a5fbc7265c}{encrypt}}(n,a,b);}
+\DoxyCodeLine{40 \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{transpose_8c_a0317bf3a0c2b9ad47aa27b1b35737176}\label{transpose_8c_a0317bf3a0c2b9ad47aa27b1b35737176}} 
+\index{transpose.c@{transpose.c}!inputfile@{inputfile}}
+\index{inputfile@{inputfile}!transpose.c@{transpose.c}}
+\doxysubsubsection{\texorpdfstring{inputfile}{inputfile}}
+{\footnotesize\ttfamily F\+I\+LE$\ast$ inputfile}
+
+
+
+Definition at line 2 of file transpose.\+c.
+
+\mbox{\Hypertarget{transpose_8c_a0522de1f60e980190c256b21ef43b8b7}\label{transpose_8c_a0522de1f60e980190c256b21ef43b8b7}} 
+\index{transpose.c@{transpose.c}!outputfile@{outputfile}}
+\index{outputfile@{outputfile}!transpose.c@{transpose.c}}
+\doxysubsubsection{\texorpdfstring{outputfile}{outputfile}}
+{\footnotesize\ttfamily F\+I\+LE$\ast$ outputfile}
+
+
+
+Definition at line 3 of file transpose.\+c.
+
