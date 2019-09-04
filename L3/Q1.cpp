@@ -157,12 +157,31 @@ void printtree(Node*root,int pos,bool temp){
   for(int i=0;i<pos;i++)
     cout<<"\t";
   cout<<root->data<<" ";
-  if(temp)
-    cout<<root->color<<endl;
+  if(temp){
+    if(root->color==0)
+    cout<<"RED"<<endl;
+    else{
+      cout<<"BLACK"<<endl;
+    }
+    }
   else
     cout<<height-pos<<endl;
   printtree(root->left,pos+1,temp);
   printtree(root->right,pos+1,temp);
+}
+void printallpaths(Node*root,int a[],int index){
+   if(root==0)
+     return;
+   a[index]=root->data;
+   if(root->right==0&&root->left==0){
+      for(int i=0;i<=index;i++){
+          cout<<a[i]<<" ";
+      }
+      cout<<endl;
+      return;
+   }
+   printallpaths(root->left,a,index+1);
+   printallpaths(root->right,a,index+1);
 }
 Node* createAVL(Node*rootBST){
    inorder.clear();
@@ -181,6 +200,7 @@ int main(){
         cout<<"2:CREATE AVL FROM INORDER:"<<endl;
         cout<<"3:PRINT IN ORDER OF BST AVL AND RED BLACK TREE:"<<endl;
         cout<<"4:LEVEL PRINT OF ALL:"<<endl;
+        cout<<"5:PRINT ALL PATHS:"<<endl;
         cout<<"-1:EXIT:"<<endl;
         int choice;
         cin>>choice;
@@ -218,6 +238,15 @@ int main(){
           cout<<"RED BLACK"<<endl;
           printtree(rootREDBLACK,0,true);
           cout<<endl;
+        }
+        if(choice==5){
+          int a[100]={0};
+          cout<<"BST:\n";
+          printallpaths(rootBST,a,0);
+          cout<<"AVL:\n";
+          printallpaths(rootAVL,a,0);
+          cout<<"RED BLACK:\n";
+          printallpaths(rootREDBLACK,a,0);
         }
         if(choice==-1){
           temp=false;
