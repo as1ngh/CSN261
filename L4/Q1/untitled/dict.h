@@ -32,11 +32,11 @@ public:
        for (int i=0;i<word.length();i++) {
            temp=temp->map[word[i]];
           if (temp==NULL)
-              return "";
+              return "NOT FOUND";
          }
        if (temp->isEndOfWord)
           return temp->meaning;
-       return "";
+       return "NOT FOUND";
     }
 };
 #endif // DICT_H
