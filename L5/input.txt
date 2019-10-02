@@ -6,4 +6,4 @@ C D 3
 C F 2
 C E 4
 D E 3
-F E 3 
+F E 3
