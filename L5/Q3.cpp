@@ -22,11 +22,7 @@ struct Graph{
 				char vertex1,vertex2,comma;
 				int weight;
 				stringstream s(temp);
-				s >> vertex1;
-				s >> comma;
-				s >> vertex2;
-				s >> comma;
-				s >> weight;
+				s >> vertex1;s >> comma;s >> vertex2;s >> comma;s >> weight;
 				this->addEdge(vertex1,vertex2,weight);
 			}
 			file.close();
@@ -57,10 +53,10 @@ struct Graph{
 		for (int i = 0; i < vertices; ++i){
 			for (int j = i; j < vertices; ++j){
 				if (adj_list[i][j] > 0){
-					cout << (char)(i+65) 
-					<< ',' << (char)(j+65) 
-					<< ',' << adj_list[i][j] << endl;
-				}	
+					cout << (char)(i+65)
+					<< "---" << (char)(j+65)
+					<< "---" << adj_list[i][j] << endl;
+				}
 			}
 		}
 	}
@@ -113,7 +109,7 @@ int main(){
 		mstSet[min->v1 % 65] = true;
 		for (int i = 0; i < graph->vertices; ++i){
 			HeapNode* node = fibo_Heap->find(fibo_Heap->minimum,i+65);
-			if (node != nullptr && graph->adj_list[min->v1 % 65][i] != 0 && 
+			if (node != nullptr && graph->adj_list[min->v1 % 65][i] != 0 &&
 				mstSet[i] == false && graph->adj_list[min->v1 % 65][i] < node->key ){
 				parent[i] = min->v1 % 65;
 				fibo_Heap->decreaseKey(node,graph->adj_list[min->v1 % 65][i]);
@@ -128,8 +124,7 @@ int main(){
 		min_tree->addEdge((char)(parent[i]+'A'), (char)(i+'A'), curr_weight);
 	}
 	min_tree->prt();
-	cout << endl;
-	cout << "Weight of the MST: " << total_weight << endl;
+	cout << "Weight: " << total_weight << endl;
 	vector<string>** String = new vector<string>*[min_tree->vertices];
 	for (int i = 0; i < min_tree->vertices; ++i){
 		String[i] = new vector<string>();
@@ -148,9 +143,12 @@ int main(){
 	}
 	str+="A;";
 	ofstream file;
-	file.open("Q3_graph.nw");
-	if (file.is_open()){
-		file << str << endl;
+	file.open("Q3_graph.py");
+	if (file.is_open())
+	{
+		file << "from ete3 import Tree" << endl;
+		file << "x = Tree(\"" << str << "\", format=1)" << endl;
+		file << "print(x.get_ascii(show_internal = True))" << endl ;
 		file.close();
 	}
 	return 0;
