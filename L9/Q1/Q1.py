@@ -28,9 +28,9 @@ def out_format(points):
 
 print('''
 Heuristic For A* Algorithm:
-	1:Manhattan Distance
-	2:Diagonal Distance
-	3:Euclidean Distance
+1:Manhattan Distance
+2:Diagonal Distance
+3:Euclidean Distance
 ''')
 
 opt = input()[0]
@@ -52,14 +52,14 @@ def check(point):
     return False
 
 src = input("Enter source coordinates: ")
-src = src.split(' ')
+src = src.split('-')
 src = (int(src[0]),int(src[1]))
 
 if check(src) != True:
 	print("ERROR")
 
 dest = input("Enter destination coordinates separated by a space : ")
-dest = dest.split(' ')
+dest = dest.split('-')
 dest = (int(dest[0]),int(dest[1]))
 
 if check(dest) != True:

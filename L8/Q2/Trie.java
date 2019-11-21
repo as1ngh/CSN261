@@ -81,6 +81,7 @@ public class Trie {
        return s1;
    }
     public static void main(String args[]) throws Exception { 
+        System.out.println("Enter Word:");
         Trie t=new Trie();
         root = new TrieNode(); 
         File file = new File("words"); 
@@ -116,7 +117,7 @@ public class Trie {
             for(j=0;j<ctr[i];j++){
             t.permutation(inputCheck[i][j], 0, i);
              }
-            System.out.println("\nCount->"+(i+1)+"="+count+"\n");
+            System.out.println("\nCount-->"+(i+1)+"="+count+"\n");
         }       
     } 
 } 
